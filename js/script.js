@@ -52,3 +52,104 @@ new Swiper('.statistics-container', {
         }
     },
 });
+
+new Swiper('.work-container', {
+    navigation: {
+        nextEl: '.work-button-next',
+        prevEl: '.work-button-prev',
+      },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 30,
+            slidesPerView: 1,
+        },
+        1330: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+        }
+    }
+});
+
+new Swiper('.reviews-container', {
+    navigation: {
+        nextEl: '.reviews-button-next',
+        prevEl: '.reviews-button-prev',
+      },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 60,
+            slidesPerView: 2 ,
+        },
+        1020: {
+            spaceBetween: 30,
+            slidesPerView: 3,
+        },
+        1330: {
+            spaceBetween: 10,
+            slidesPerView: 4,
+        }
+    }
+});
+
+// let blokItem = document.querySelectorAll('.blok');
+// let current = 0;
+
+// let prev = document.querySelector('.prev');
+// let next = document.querySelector('.next');
+
+
+// next.addEventListener('click', function() {
+//     change_block("+")
+// })
+
+// prev.addEventListener('click', function() {
+//     change_block("-")
+// })
+
+// function change_block(type) {
+//     for( let i = 0; i < blokItem.length; i++ ) {
+//         blokItem[i].classList.remove('block-active')
+//     }
+
+//     for( let i = 0; i < blokItem.length; i++ ) {
+//         if (i == current) {
+//             if (blokItem[current]) {
+//                 switch (type) {
+//                     case "+":
+//                         current = i + 1
+//                         blokItem[current].classList.add('block-active')
+//                         break;
+//                     case "-":
+//                         current = i - 1
+//                         blokItem[current].classList.add('block-active')
+//                         break;
+//                 }
+//             }
+            
+//             break
+//         }
+//     }
+//     console.log(current)
+// }
+
+
+let Item = document.querySelectorAll('.answers-item');
+
+for( let i = 0; i < answersItem.length; i++ ){
+  answersItem[i].addEventListener('click', function(){
+    this.classList.toggle('sisi');
+  });
+}
