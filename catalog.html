@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style/style.css">
+    <title>Юнитек</title>
+</head>
+<body class="page-body dublik-header body-dublik">
+   <header class="page-header  header-index">
+        <div class="header-wrap">
+            <nav class="header-nav">
+                <a class="header__logo" href="index.html">
+                    <picture class="header-img">
+                        <source media="(min-width: 768px)" srcset="image/header-logo-nav-desctop.png">
+                        <img class="header-img" src="image/header-logo-nav-mobile.png" width="151" height="51" alt="Логотип ЮНИТЕК">
+                    </picture>
+                </a>
+                <button class="button-open--nav button-open--nav-dublik"><span class="togle-center togle-center-dublik"></span><span class="button-text button-text-dublik">Меню</span></button>
+                <div class="header-link">
+                    <a class="header-mail header-mail-dublik" href="mailto:unitecseptik@gmail.com">unitecseptik@gmail.com</a>
+                    <div class="header-call">
+                        <a class="header-tel header-tel-dublik" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
+                        <button type="button" class="button-call button-call">Заказать звонок</button>                   
+                    </div>                    
+                </div>
+            </nav>
+        </div>
+        <div class="header-nav--pop pop">
+            <div class="pop-wrap">
+                <div class="pop-logo">
+                    <a class="pop__logo" href="index.html">
+                        <picture>
+                            <source media="(min-width: 768px)" srcset="image/header-logo-nav-desctop.png">
+                            <img class="pop-img" src="image/header-logo-nav-mobile.png" width="151" height="51" alt="Логотип ЮНИТЕК">
+                        </picture>
+                    </a>
+                    <button type="button" class="button-closse--nav"></button>                     
+                </div>
+                <nav class="pop-navigation">
+                    <ul class="navigation-list--pop">
+                        <li class="navigation-item--pop"><a href="index.html">Главная</a></li>
+                        <li class="navigation-item--pop"><a href="#">О компании</a></li>
+                        <li class="navigation-item--pop"><a href="#">Ответы на вопрос</a></li>
+                        <li class="navigation-item--pop"><a href="services.html">Услуги</a></li>
+                        <li class="navigation-item--pop"><a href="#">Выполненные проекты</a></li>
+                        <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
+                        <li class="navigation-item--pop"><a href="#">Каталог</a></li>
+                        <li class="navigation-item--pop"><a href="#">Отзывы</a></li>
+                        <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                    </ul>
+                    <div class="pop-connection connection">
+                        <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
+                        <a class="connection-mail" href="mailto:unitecseptik@gmail.com">unitecseptik@gmail.com</a>
+                        <div class="connection-social social">
+                            <a class="social-whatsapp" href="tel:+7 (912) 727-07-83">Whatsapp</a>
+                            <a class="social-viber" href="tel:+7 (912) 727-07-83">Viber</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+   </header> 
+   <main>
+    <ul class="navigation-inex--list">
+        <li class="navigation-inex--item">
+            <a class="" href="index.html">Главная</a>
+        </li>
+        <li class="navigation-inex--item">
+            Каталог
+        </li>
+    </ul>
+    <section class="catalog catalog-dublik">
+        <h2 class="catalog-header"><span class="color-orange">Каталог</span> продукции</h2>
+        <button type="button" class="catalog-button">Фильтровать</button>
+        <div class="catalog-wrap wrap">
+            <div class="filtrs">
+                <div class="name-close">Фильтровать</div>
+                <form class="filtr-form" method="GET" action="https://echo.htmlacademy.ru">
+                    <fieldset class="filtr-form--fildset fildset-filtr--devices">
+                        <h2 class="header-category fildset-filtr--header header-close">Устройство</h2>
+                        <div class="fildset-filtr-devices--categories category-open">
+                            <div class="devices-septic">
+                                <h2 class="devices-header devices-septic header-close color-green">Септики</h2>
+                                <ul class="podkategory septic-list Bio-treatment-list category-open border-radius">
+                                    <li class="item-filtr septic-item devices-item">
+                                      <input class="visually-hidden septic-input input-style" type="radio" name="septic" value="оптима" id="optim">
+                                      <label class="devices-leabel" for="optim">Оптима</label>
+                                    </li>
+                                    <li class="item-filtr septic-item devices-item ">
+                                      <input class="visually-hidden septic-input input-style" type="radio" name="septic"  value="Гарант" id="garant">
+                                      <label class="devices-leabel" for="garant">Гарант</label>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="devices-Bio-treatment">
+                                <h2 class="devices-header devices-Bio-treatment header-close">Станции биоочистки</h2>
+                                <ul class="podkategory Bio-treatment-list category-open">
+                                    <li class="item-filtr Bio-treatment-item devices-item">
+                                      <input class="visually-hidden Bio-treatment-input input-style" type="radio" name="Bio-treatment" value="Станция-1" id="plants-1">
+                                      <label class="devices-leabel" for="plants-1">Станция 1</label>
+                                    </li>
+                                    <li class="item-filtr Bio-treatment-item devices-item">
+                                      <input class="visually-hidden Bio-treatment-input input-style" type="radio" name="Bio-treatment"  value="Станция-2" id="plants-2">
+                                      <label class="devices-leabel" for="plants-2">Станция 2</label>
+                                    </li>
+                                  </ul>
+                            </div>
+                            <div class="devices-treatment">
+                                <h2 class="devices-header devices-treatment header-close">Локальные очистные сооружения</h2>
+                                <ul class="podkategory treatment-list category-open">
+                                    <li class="item-filtr treatment-item devices-item">
+                                      <input class="visually-hidden treatment-input input-style" type="radio" name="treatment" value="Станция-1" id="treatment-1">
+                                      <label class="devices-leabel" for="treatment-1">Станция 1</label>
+                                    </li>
+                                    <li class="item-filtr treatment-item devices-item">
+                                      <input class="visually-hidden treatment-input input-style" type="radio" name="treatment"  value="Станция-2" id="treatment-2">
+                                      <label class="devices-leabel" for="treatment-2">Станция 2</label>
+                                    </li>
+                                  </ul>
+                            </div>
+                        </div>
+                    </fieldset>
+            
+                    <div class="fildset-block">
+                        <fieldset class="fildset-number-users number-users"> 
+                            <h2 class="header-category header-close">Количество пользователей</h2>
+                            <ul class="number-users-list category-open category-open">
+                                <li class="item-filtr number-users-item">
+                                    <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-1">
+                                    <label class="devices-leabel" for="number-users-1">1-3</label>
+                                </li>
+                                <li class="item-filtr number-users-item">
+                                    <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-2">
+                                    <label class="devices-leabel" for="number-users-2">3-6</label>
+                                </li>
+                                <li class="item-filtr number-users-item">
+                                    <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-3">
+                                    <label class="devices-leabel" for="number-users-3">7-9</label>
+                                </li>
+                                <li class="item-filtr number-users-item">
+                                    <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-4">
+                                    <label class="devices-leabel" for="number-users-4">Больше 10</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+            
+                        <fieldset class="filtr-form--fildset">
+                            <h2 class="header-category header-close">Уровень грунтовой воды</h2>
+                            <ul class="ground-list category-open category-open">
+                                <li class="item-filtr ground-item">
+                                    <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-1" id="ground-1">
+                                    <label class="devices-leabel" for="ground-1">Высокий</label>
+                                </li>
+                                <li class="item-filtr ground-item">
+                                    <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-2" id="ground-2">
+                                    <label class="devices-leabel" for="ground-2">Низкий</label>
+                                </li>
+                                <li class="item-filtr ground-item">
+                                    <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-3" id="ground-3">
+                                    <label class="devices-leabel" for="ground-3">Показать все</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        
+                        <fieldset class="filtr-form--fildset">
+                            <h2 class="header-category header-close">Цена</h2>
+                            <div class="range-filter category-open">
+                                <div class="range-conrols">
+                                  <div class="scale">
+                                    <div class="bar"></div>
+                                  </div>
+                                  <div class="toggle toggle-min" tabindex="0"></div>
+                                  <div class="toggle toggle-max" tabindex="0"></div>
+                                </div>
+                                <div class="price-controls">
+                                  <label class="price min-price">
+                                    <input class="min-price-input" type="number" name="min-price" value="5199">
+                                  </label>
+                                  <label class="price min-price">
+                                    <input class="max-price-input" type="number" name="max-price" value="52199">
+                                  </label>
+                                </div>
+                            </div>
+                        </fieldset>            
+                    </div>
+                    <button type="button" class="button-filtr">применить</button>
+                    <button type="button" class="button-filtr--clear">Очистить</button>
+                </form>
+            </div>
+            <div class="catalog-wraps-block">
+                <ul class="catalog-list">
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                    <li class="catalog-item">
+                        <div class="catalog-item--block">
+                            <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                            <h2 class="catalog-item--header">Септик 1</h2>
+                            <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                            <span class="catalog-item--price">30 521 ₽</span>
+                            <button class="catalog-item--button btn">Подробнее</button>                            
+                        </div>
+                    </li>
+                </ul>  
+                <ul class="pagination-list">
+                    <li class="pagination-item">
+                        <a href="#"></a>
+                    </li>
+                    <li class="pagination-item pagination-link">
+                        <a href="#">1</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">2</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">...</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#">12</a>
+                    </li>
+                    <li class="pagination-item">
+                        <a href="#"></a>
+                    </li>
+                </ul>                  
+            </div>
+        </div>
+    </section>
+    <section class="structure">
+        <div class="structure-absolute"></div>
+        <div class="wrap structure-wrap">
+            <div class="structure-text"> 
+                <h2 class="structure-header"><span class="color-orange">Из чего производится</span><br> наша продукция</h2>
+                <p class="structure-subtitle">Наша продукция производится только из первосортного сертифицированного сырья. <span class="color-green">Мы используем Полиэтилен низкого давления марки ПЭ100.</span></p>
+                <p class="structure-subtitle structure-subtitle-two">Эта марка полимера зарекомендовала себя как очень прочный, износостойкий материал, не поверженный гниению растрескиванию и разложению. Он с легкостью переносит низкие и высокие температуры, а так же выдерживает сильные кислоты и щелочи без потери эксплуатационных характеристик.</p>
+                <p class="structure-subtitle structure-subtitle-the"><span class="color-green">Использование импортного оборудования при производстве обеспечивает качественную сварку всех конструкций, а отдел технического контроля следит за выдержкой нужных параметров.</span></p>
+            </div>
+            <div class="structure-img--block">
+                <div class="structure-description">
+                    <img class="structure-img" src="image/septic.png" width="210" height="230" alt="септик">
+                    <div class="structure-description-met structure-description-no-odors">
+                        <div class="description-met met-no-odors"></div>
+                    </div>
+                    <div class="description-popup description-popup-met-no-odors">Каракатица ф вцфццц ыфва</div>
+                    
+                    <div class="structure-description-met structure-description-no-chemistry">
+                        <div class="description-met met-no-chemistry"></div>
+                    </div>   
+                    <div class="description-popup  description-popup-met-no-chemistry">Кает вф вцфццц ыфва</div> 
+                    
+                    <div class="structure-description-met structure-description-testing-detector">
+                        <div class="description-met met-testing-detector"></div>
+                    </div>  
+                    <div class="description-popup description-popup-met-testing-detector">Каракатица d сережа  32 2 32 2привет вф вцфццц ыфва</div>
+                    
+                    <div class="structure-description-met structure-description-pressure-test">
+                        <div class="description-met met-pressure-test"></div>
+                    </div>   
+                    <div class="description-popup description-popup-met-pressure-test">Каракатицавет вф вцфццц ыфва</div>
+                    
+                    <div class="structure-description-met structure-description-welding-technologies">
+                        <div class="description-met met-welding-technologies"></div>
+                    </div>  
+                    <div class="description-popup description-popup-met-welding-technologies">Каракатица 45 4 45 d сережа привет вф вцфццц ыфва</div>  
+                    
+                    <div class="structure-description-met structure-description-skinny">
+                        <div class="description-met met-skinny"></div>
+                    </div>  
+                    <div class="description-popup description-popup-met-skinny">Каракатица d сережа привет вф вцфццц ыфва</div>   
+                    
+                    <div class="structure-description-met structure-description-cold-protection">
+                        <div class="description-met met-cold-protection"></div>
+                    </div> 
+                    <div class="description-popup description-popup-met-cold-protection">Каракатица d сережа приветфва</div>   
+                    
+                    <div class="structure-description-met structure-description-protection-electrical">
+                        <div class="description-met met-protection-electrical"></div>
+                    </div> 
+                    <div class="description-popup description-popup-met-protection-electrical">Каракатицапривет вф вцфццц ыфва</div>  
+                    
+                    <div class="structure-description-met structure-description-blockage-protection">
+                        <div class="description-met met-blockage-protection"></div>
+                    </div>
+                    <div class="description-popup description-popup-met-blockage-protection">Каракатица d сережа пр 54 54 ивет вф вцфццц ыфва</div>
+                </div>
+            </div>
+        </div>
+    </section>
+   </main>
+   <footer class="footer">
+    <div class="wrap">
+        <div class="pop-wrap pop-wrap--footer">
+            <div class="pop-logo">
+                <a class="pop__logo" href="index">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="image/header-logo-nav-desctop.png">
+                        <img class="pop-img" src="image/header-logo-nav-mobile.png" width="151" height="51" alt="Логотип ЮНИТЕК">
+                    </picture>
+                </a>                    
+            </div>
+            <nav class="pop-navigation">
+                <ul class="navigation-list--pop navigation-list--pop-footer">
+                    <li class="navigation-item--pop"><a href="#">Главная</a></li>
+                    <li class="navigation-item--pop"><a href="#">О компании</a></li>
+                    <li class="navigation-item--pop"><a href="#">Ответы на вопрос</a></li>
+                    <li class="navigation-item--pop"><a href="#">Усдуги</a></li>
+                    <li class="navigation-item--pop"><a href="#">Выполненные проекты</a></li>
+                    <li class="navigation-item--pop"><a href="#">Контакты</a></li>
+                    <li class="navigation-item--pop"><a href="#">Каталог</a></li>
+                    <li class="navigation-item--pop"><a href="#">Отзывы</a></li>
+                    <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                </ul>
+                <div class="pop-connection pop-connection--footer connection">
+                    <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
+                    <a class="connection-mail" href="mailto:unitecseptik@gmail.com">unitecseptik@gmail.com</a>
+                    <div class="connection-social social">
+                        <a class="social-whatsapp" href="tel:+7 (912) 727-07-83">Whatsapp</a>
+                        <a class="social-viber" href="tel:+7 (912) 727-07-83">Viber</a>
+                    </div>
+                </div>
+            </nav>
+        </div>    
+        <div class="footer-politic">
+            <div class="footer-text">
+                <p class="footer-text-one">Политика конфиденциальности</p>
+                <p class="footer-text-two">ИП Скутина Алёна Владимировна<br>ОГРНИП 321435000010346 ИНН 431303711735</p>
+            </div>
+            <p class="footer-devoloper">Разработка сайта–<span>Вятка IT</span></p>
+        </div>       
+    </div>
+   </footer>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="js/script.js"></script>
+</body>
+</html>
