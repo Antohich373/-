@@ -23,7 +23,7 @@
                     <a class="header-mail" href="mailto:unitecseptik@gmail.com">unitecseptik@gmail.com</a>
                     <div class="header-call">
                         <a class="header-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
-                        <button type="button" class="button-call">Заказать звонок</button>                   
+                        <button type="button" class="button-call open-cal">Заказать звонок</button>                   
                     </div>                    
                 </div>
             </nav>
@@ -809,7 +809,7 @@
                                 <a class="contacts-social--viber" href="tel:+7 (912) 727-07-83">Viber</a>     
                             </li>
                         </ul>
-                        <button class="contacts-button button">Заказать звонок</button>
+                        <button class="contacts-button button open-cal">Заказать звонок</button>
                     </div>
                 </div>
                 <div class="contacts-block--img">
@@ -873,6 +873,31 @@
        <li class="blok">3</li>
        <button class="prev">Назад</button>
        <button class="next">вперед</button>
+   </div>
+   <div class="modal-order-call">
+       <div class="modal-order-call--block">
+            <h2 class="order-call-header">Заказать звонок</h2>
+            <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
+            <form class="modal-order-call--form">
+                <fieldset class="modal-order-call--fieldset">
+                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя">
+                    <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99">
+                </fieldset>
+                <div class="conteiner-button">
+                    <button class="order-call-button" type="submit">Заказать звонок</button>                    
+                </div>
+                <div class="consultation-form--approval">
+                    <input class="consultation-form--checkbox visually-hidden" id="checkbox" type="checkbox" name="approval" required checked>
+                    <label for="checkbox" class="consultation-form--subtitle">Даю согласие на обработку <a href="#">персональных данных</a></p>
+                </div>
+            </form>
+       </div>
+       <div class="close-modal">
+
+       </div>
+   </div>
+   <div class="modal-shadow">
+
    </div>
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script>

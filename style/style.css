@@ -4758,3 +4758,194 @@ fieldset {
     top: 3px;
     font-size: 14px;
 }
+
+/*МОДЕЛЬНЫЕ ОКНА*/
+
+/*заказать звонок*/
+.modal-order-call {
+    display: none;
+    position: relative;
+    width: 310px;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    position: fixed;
+    top: calc(50% - 240px);
+    left: calc(50% - 155px);
+    z-index: 999;
+}
+
+.modal-shadow {
+    background: rgba(75, 66, 66, 0.9);
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.modal-shadow-active {
+    display: block;
+}
+
+.modal-order-call-active {
+    display: block;
+}
+
+.close-modal {
+    cursor: pointer;
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-image: url('../image/close-modal.png');
+    top: -30px;
+    right: -30px;
+}
+
+@media (min-width: 768px) { 
+    right: 0px;
+}
+
+@media (min-width: 768px) { 
+    .modal-order-call {
+        width: 520px;
+        left: calc(50% - 260px);
+        top: calc(50% - 290px);
+    }
+}
+
+.modal-order-call--block {
+    border: 1px solid #BAE3A4;
+    border-radius: 12px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) { 
+    .modal-order-call--block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }   
+}
+
+.order-call-header {
+    font-weight: 500;
+    font-size: 29px;
+    line-height: 100%;
+    color: #4B4242;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) { 
+    .order-call-header {
+        font-size: 48px;
+    }    
+}
+
+.order-call-subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: #4B4242;
+    max-width: 320px;
+    margin: 0;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.modal-order-call--form {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 290px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) { 
+    .modal-order-call--form {
+        width: 350px;
+    }  
+}
+
+.modal-order-call--fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) { 
+    .modal-order-call--fieldset {
+        margin-top: 50px;
+    }  
+}
+
+.order-call-tel {
+    margin-top: 12px;   
+}
+
+@media (min-width: 768px) { 
+    .order-call-tel {
+        margin-top: 20px;   
+    }   
+}
+
+.conteiner-button {
+    min-width: 290px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 12px;
+}
+
+.order-call-button {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    background: linear-gradient(180deg, #85CD43 0%, #4CB854 100%);
+    box-shadow: 0px 3px 0px #2F8F2C;
+    border-radius: 60px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+}
+
+@media (min-width: 768px) { 
+    .order-call-button {
+        margin-top: 20px;
+    }
+}
+
+.order-call-input {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #AAAAAA;
+    font-family: 'Futura PT', sans-serif;
+    background: #F1F1F1;
+    border-radius: 60px;
+    padding: 19px 20px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+@media (min-width: 768px) { 
+    .order-call-input {
+        font-size: 20px;
+        padding: 20px 30px;
+    }  
+}

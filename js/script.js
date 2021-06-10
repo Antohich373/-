@@ -145,6 +145,86 @@ function change_block(type) {
     console.log(current)
 }
 
+class PhoneMask {
+    constructor(input) {
+        this.input = input
+        this.maskPattern = '+7 (___) ___-__-__'
+        this.input.oninput = this.inputEvent.bind(this)
+        this.input.onfocus = this.focusEvent.bind(this)
+        this.input.onblur = this.focusOutEvent.bind(this)
+    }
+    inputEvent(e) {
+        if (this.input.getAttribute('data-input') && this.input.getAttribute('data-input').length >= 11) {
+            this.input.value = this.input.value.substr(0, this.input.value.length - 1)
+            this.input.setAttribute('data-input', this.input.getAttribute('data-input').substr(0, this.input.getAttribute('data-input').length - 1))
+            return false
+        }
+        if (e.inputType != 'deleteContentBackward' && !e.data.match(/[0-9]/)) {
+            this.input.value = this.input.value.replace(/[A-Za-zА-Яа-яЁё]/, '').substr(0, this.input.value.length - 1)
+            return false
+        }
+        if (e.inputType != 'deleteContentBackward') {
+            if (!this.input.getAttribute('data-input')) {
+                this.input.setAttribute('data-input', e.data)
+            } else {
+                this.input.setAttribute('data-input', this.input.getAttribute('data-input') + e.data)
+            }
+        } else {
+            this.input.setAttribute('data-input', this.input.getAttribute('data-input').substr(0, this.input.getAttribute('data-input').length - 1))
+        }   
+        let new_string = ''
+        let position = 0
+        for (let char of this.maskPattern) {    
+            let input = this.input.getAttribute('data-input')
+            let input_length = input.length
+            
+            if (position <= input_length-1 && char == '_') {
+                new_string += input[position]
+                position++
+                continue
+            } else {
+                new_string += char
+            }
+        }
+        this.input.value = new_string
+    }
+    focusEvent() {
+        if (this.input.value == '') {
+            this.input.value = this.maskPattern
+        }
+    }
+    focusOutEvent() {
+        if (!this.input.getAttribute('data-input') || this.input.getAttribute('data-input').length < 10) {
+            this.input.value = ''
+            this.input.setAttribute('data-input', '')
+        }
+    }
+}
+
+document.querySelectorAll('[type=tel]').forEach(function(item) {
+    new PhoneMask(item)
+})
+
+
+let openCallModal = document.querySelectorAll('.open-cal')
+let closeModal = document.querySelector('.close-modal')
+
+let modalShadow = document.querySelector('.modal-shadow')
+let callModal = document.querySelector('.modal-order-call')
+
+for( let i = 0; i < openCallModal.length; i++ ){
+    openCallModal[i].addEventListener('click', function() {
+        callModal.classList.add('modal-order-call-active')
+        modalShadow.classList.add('modal-shadow-active')
+    })    
+}
+
+
+closeModal.addEventListener('click', function() {
+    callModal.classList.remove('modal-order-call-active')
+    modalShadow.classList.remove('modal-shadow-active') 
+})
+
 
 let answersItem = document.querySelectorAll('.answers-item');
 
