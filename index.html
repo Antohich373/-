@@ -392,6 +392,231 @@
                 <a href="#" class="work-button--link">Смотреть все</a>
             </div>
         </section>
+        <section class="catalog">
+            <h2 class="catalog-header"><span class="color-orange">Каталог</span> продукции</h2>
+            <button type="button" class="catalog-button">Фильтровать</button>
+            <div class="catalog-wrap wrap">
+                <div class="filtrs">
+                    <div class="name-close">Фильтровать</div>
+                    <form class="filtr-form" method="GET" action="https://echo.htmlacademy.ru">
+                        <fieldset class="filtr-form--fildset fildset-filtr--devices">
+                            <h2 class="header-category fildset-filtr--header header-close">Устройство</h2>
+                            <div class="fildset-filtr-devices--categories category-open">
+                                <div class="devices-septic">
+                                    <h2 class="devices-header devices-septic header-close color-green">Септики</h2>
+                                    <ul class="podkategory septic-list Bio-treatment-list category-open border-radius">
+                                        <li class="item-filtr septic-item devices-item">
+                                          <input class="visually-hidden septic-input input-style" type="radio" name="septic" value="оптима" id="optim">
+                                          <label class="devices-leabel" for="optim">Оптима</label>
+                                        </li>
+                                        <li class="item-filtr septic-item devices-item ">
+                                          <input class="visually-hidden septic-input input-style" type="radio" name="septic"  value="Гарант" id="garant">
+                                          <label class="devices-leabel" for="garant">Гарант</label>
+                                        </li>
+                                      </ul>
+                                </div>
+                                <div class="devices-Bio-treatment">
+                                    <h2 class="devices-header devices-Bio-treatment header-close">Станции биоочистки</h2>
+                                    <ul class="podkategory Bio-treatment-list category-open">
+                                        <li class="item-filtr Bio-treatment-item devices-item">
+                                          <input class="visually-hidden Bio-treatment-input input-style" type="radio" name="Bio-treatment" value="Станция-1" id="plants-1">
+                                          <label class="devices-leabel" for="plants-1">Станция 1</label>
+                                        </li>
+                                        <li class="item-filtr Bio-treatment-item devices-item">
+                                          <input class="visually-hidden Bio-treatment-input input-style" type="radio" name="Bio-treatment"  value="Станция-2" id="plants-2">
+                                          <label class="devices-leabel" for="plants-2">Станция 2</label>
+                                        </li>
+                                      </ul>
+                                </div>
+                                <div class="devices-treatment">
+                                    <h2 class="devices-header devices-treatment header-close">Локальные очистные сооружения</h2>
+                                    <ul class="podkategory treatment-list category-open">
+                                        <li class="item-filtr treatment-item devices-item">
+                                          <input class="visually-hidden treatment-input input-style" type="radio" name="treatment" value="Станция-1" id="treatment-1">
+                                          <label class="devices-leabel" for="treatment-1">Станция 1</label>
+                                        </li>
+                                        <li class="item-filtr treatment-item devices-item">
+                                          <input class="visually-hidden treatment-input input-style" type="radio" name="treatment"  value="Станция-2" id="treatment-2">
+                                          <label class="devices-leabel" for="treatment-2">Станция 2</label>
+                                        </li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </fieldset>
+                
+                        <div class="fildset-block">
+                            <fieldset class="fildset-number-users number-users"> 
+                                <h2 class="header-category header-close">Количество пользователей</h2>
+                                <ul class="number-users-list category-open category-open">
+                                    <li class="item-filtr number-users-item">
+                                        <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-1">
+                                        <label class="devices-leabel" for="number-users-1">1-3</label>
+                                    </li>
+                                    <li class="item-filtr number-users-item">
+                                        <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-2">
+                                        <label class="devices-leabel" for="number-users-2">3-6</label>
+                                    </li>
+                                    <li class="item-filtr number-users-item">
+                                        <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-3">
+                                        <label class="devices-leabel" for="number-users-3">7-9</label>
+                                    </li>
+                                    <li class="item-filtr number-users-item">
+                                        <input class="visually-hidden number-users-input input-style" type="radio" name="number-users" value="Станция-1" id="number-users-4">
+                                        <label class="devices-leabel" for="number-users-4">Больше 10</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                
+                            <fieldset class="filtr-form--fildset">
+                                <h2 class="header-category header-close">Уровень грунтовой воды</h2>
+                                <ul class="ground-list category-open category-open">
+                                    <li class="item-filtr ground-item">
+                                        <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-1" id="ground-1">
+                                        <label class="devices-leabel" for="ground-1">Высокий</label>
+                                    </li>
+                                    <li class="item-filtr ground-item">
+                                        <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-2" id="ground-2">
+                                        <label class="devices-leabel" for="ground-2">Низкий</label>
+                                    </li>
+                                    <li class="item-filtr ground-item">
+                                        <input class="visually-hidden ground-input input-style" type="radio" name="ground" value="Станция-3" id="ground-3">
+                                        <label class="devices-leabel" for="ground-3">Показать все</label>
+                                    </li>
+                                </ul>
+                            </fieldset>
+                            
+                            <fieldset class="filtr-form--fildset">
+                                <h2 class="header-category header-close">Цена</h2>
+                                <div class="range-filter category-open">
+                                    <div class="range-conrols">
+                                      <div class="scale">
+                                        <div class="bar"></div>
+                                      </div>
+                                      <div class="toggle toggle-min" tabindex="0"></div>
+                                      <div class="toggle toggle-max" tabindex="0"></div>
+                                    </div>
+                                    <div class="price-controls">
+                                      <label class="price min-price">
+                                        <input class="min-price-input" type="number" name="min-price" value="5199">
+                                      </label>
+                                      <label class="price min-price">
+                                        <input class="max-price-input" type="number" name="max-price" value="52199">
+                                      </label>
+                                    </div>
+                                </div>
+                            </fieldset>            
+                        </div>
+                        <button type="button" class="button-filtr">применить</button>
+                        <button type="button" class="button-filtr--clear">Очистить</button>
+                    </form>
+                </div>
+                <div class="catalog-wraps-block">
+                    <ul class="catalog-list">
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                        <li class="catalog-item">
+                            <div class="catalog-item--block">
+                                <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
+                                <h2 class="catalog-item--header">Септик 1</h2>
+                                <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
+                                <span class="catalog-item--price">30 521 ₽</span>
+                                <button class="catalog-item--button btn">Подробнее</button>                            
+                            </div>
+                        </li>
+                    </ul>  
+                    <ul class="pagination-list">
+                        <li class="pagination-item">
+                            <a href="#"></a>
+                        </li>
+                        <li class="pagination-item pagination-link">
+                            <a href="#">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#">12</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#"></a>
+                        </li>
+                    </ul>                  
+                </div>
+            </div>
+        </section>
         <section class="why-we">
             <div class="why-we--wrap wrap">
                 <h2 class="why-we--header"> <span class="color-orange">4 причины для установки</span> <br> системы биоочистки</h2>
@@ -642,13 +867,13 @@
     </div>
  
    </footer>
-   <div>
+   <!-- <div>
        <li class="blok">1</li>
        <li class="blok">2</li>
        <li class="blok">3</li>
        <button class="prev">Назад</button>
        <button class="next">вперед</button>
-   </div>
+   </div> -->
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script>
 </body>

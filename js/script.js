@@ -146,10 +146,32 @@ new Swiper('.reviews-container', {
 // }
 
 
-let Item = document.querySelectorAll('.answers-item');
+let answersItem = document.querySelectorAll('.answers-item');
 
 for( let i = 0; i < answersItem.length; i++ ){
   answersItem[i].addEventListener('click', function(){
     this.classList.toggle('sisi');
   });
 }
+
+let headerCategory = document.querySelectorAll('.header-close')
+
+for( let i = 0; i < headerCategory.length; i++ ){
+    headerCategory[i].addEventListener('click', function(){
+    this.classList.toggle('header-open');
+    this.classList.toggle('active');
+  });
+}   
+
+let buttonFiltrOpen = document.querySelector('.catalog-button')
+let filtr = document.querySelector('.filtrs')
+
+buttonFiltrOpen.addEventListener('click',function() {
+    filtr.classList.add('filtrs-activ')
+})
+
+let closeFilter = document.querySelector('.name-close')
+
+closeFilter.addEventListener('click',function() {
+    filtr.classList.remove('filtrs-activ')
+})
