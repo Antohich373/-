@@ -1,14 +1,18 @@
+//ОТКРЫТЬ ЗАКРЫТЬ МЕНЮ 
 let openNav = document.querySelector('.button-open--nav')
 let closeNav = document.querySelector('.button-closse--nav')
 
 openNav.addEventListener('click', function() {
     document.querySelector('.header-nav--pop').classList.add('header-nav--pop-open')
+    modalShadow.classList.add('modal-shadow-active');
 })
 
 closeNav.addEventListener('click', function() {
     document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
+    modalShadow.classList.remove('modal-shadow-active');
 })
 
+//СЛАЙДЕР У ШАПКИ
 new Swiper('.features-container', {
     breakpoints: {
         320: {
@@ -30,7 +34,9 @@ new Swiper('.features-container', {
         }
     },
 });
+//
 
+//СЛАЙДЕР ЮНИТЕК В ЦИФРАХ
 new Swiper('.statistics-container', {
     breakpoints: {
         320: {
@@ -52,7 +58,9 @@ new Swiper('.statistics-container', {
         }
     },
 });
+//
 
+//СЛАЙДЕР СДАЕМ ДО 300 ОБЬКУТОВ
 new Swiper('.work-container', {
     navigation: {
         nextEl: '.work-button-next',
@@ -76,7 +84,9 @@ new Swiper('.work-container', {
         }
     }
 });
+//
 
+//СЛАЙДЕР ОТЗЫВЫ
 new Swiper('.reviews-container', {
     navigation: {
         nextEl: '.reviews-button-next',
@@ -103,27 +113,23 @@ new Swiper('.reviews-container', {
         }
     }
 });
+//
 
+//ТЕСТОВЫЙ СКРИПТ
 let blokItem = document.querySelectorAll('.blok');
 let current = 0;
-
 let prev = document.querySelector('.prev');
 let next = document.querySelector('.next');
-
-
 next.addEventListener('click', function() {
     change_block("+")
 })
-
 prev.addEventListener('click', function() {
     change_block("-")
 })
-
 function change_block(type) {
     for( let i = 0; i < blokItem.length; i++ ) {
         blokItem[i].classList.remove('block-active')
     }
-
     for( let i = 0; i < blokItem.length; i++ ) {
         if (i == current) {
             if (blokItem[current]) {
@@ -137,14 +143,15 @@ function change_block(type) {
                         blokItem[current].classList.add('block-active')
                         break;
                 }
-            }
-            
+            } 
             break
         }
     }
     console.log(current)
 }
+//
 
+//МАСКА НА ТЕЛЕФОН
 class PhoneMask {
     constructor(input) {
         this.input = input
@@ -200,58 +207,66 @@ class PhoneMask {
         }
     }
 }
-
 document.querySelectorAll('[type=tel]').forEach(function(item) {
     new PhoneMask(item)
 })
+//
 
-
+//ЗАКАЗАТЬЗВОНОК
 let openCallModal = document.querySelectorAll('.open-cal')
 let closeModal = document.querySelector('.close-modal')
-
 let modalShadow = document.querySelector('.modal-shadow')
 let callModal = document.querySelector('.modal-order-call')
-
 for( let i = 0; i < openCallModal.length; i++ ){
     openCallModal[i].addEventListener('click', function() {
         callModal.classList.add('modal-order-call-active')
         modalShadow.classList.add('modal-shadow-active')
     })    
 }
-
-
 closeModal.addEventListener('click', function() {
     callModal.classList.remove('modal-order-call-active')
     modalShadow.classList.remove('modal-shadow-active') 
 })
+modalShadow.addEventListener('click', function() {
+    callModal.classList.remove('modal-order-call-active')
+    modalShadow.classList.remove('modal-shadow-active') 
+})
+window.addEventListener('keydown', function(evt){
+    if(evt.keyCode === 27){
+        evt.preventDefault();
+       if(modalShadow.classList.contains('modal-shadow-active') || callModal.classList.contains('modal-order-call-active')){
+        modalShadow.classList.remove('modal-shadow-active');
+        callModal.classList.remove('modal-order-call-active');
+       }  
+    }   
+});
+//
 
-
+//ОТВЕТЫ НА ВОПРОСЫ
 let answersItem = document.querySelectorAll('.answers-item');
-
 for( let i = 0; i < answersItem.length; i++ ){
   answersItem[i].addEventListener('click', function(){
     this.classList.toggle('sisi');
+    this.classList.toggle('answers-item--text-open')
   });
 }
-
 let headerCategory = document.querySelectorAll('.header-close')
-
 for( let i = 0; i < headerCategory.length; i++ ){
     headerCategory[i].addEventListener('click', function(){
     this.classList.toggle('header-open');
     this.classList.toggle('active');
   });
 }   
+//
 
+//ФИЛЬТР ТОВАРОВ
 let buttonFiltrOpen = document.querySelector('.catalog-button')
 let filtr = document.querySelector('.filtrs')
-
 buttonFiltrOpen.addEventListener('click',function() {
     filtr.classList.add('filtrs-activ')
 })
-
 let closeFilter = document.querySelector('.name-close')
-
 closeFilter.addEventListener('click',function() {
     filtr.classList.remove('filtrs-activ')
 })
+//

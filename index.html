@@ -42,13 +42,13 @@
                 <nav class="pop-navigation">
                     <ul class="navigation-list--pop">
                         <li class="navigation-item--pop"><a href="#">Главная</a></li>
-                        <li class="navigation-item--pop"><a href="#">О компании</a></li>
-                        <li class="navigation-item--pop"><a href="#">Ответы на вопрос</a></li>
-                        <li class="navigation-item--pop"><a href="services.html">Усдуги</a></li>
-                        <li class="navigation-item--pop"><a href="#">Выполненные проекты</a></li>
+                        <li class="navigation-item--pop"><a href="about.html">О компании</a></li>
+                        <li class="navigation-item--pop"><a href="answers-questions.html">Ответы на вопрос</a></li>
+                        <li class="navigation-item--pop"><a href="services.html">Услуги</a></li>
+                        <li class="navigation-item--pop"><a href="works.html">Выполненные проекты</a></li>
                         <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
                         <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
-                        <li class="navigation-item--pop"><a href="#">Отзывы</a></li>
+                        <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
                         <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
                     </ul>
                     <div class="pop-connection connection">
@@ -389,7 +389,7 @@
                     <div class="work-button work-button-prev"></div>
                     <div class="work-button work-button-next"></div>                                  
                 </div>
-                <a href="#" class="work-button--link">Смотреть все</a>
+                <a href="works.html" class="work-button--link">Смотреть все</a>
             </div>
         </section>
         <section class="catalog">
@@ -838,13 +838,13 @@
             <nav class="pop-navigation">
                 <ul class="navigation-list--pop navigation-list--pop-footer">
                     <li class="navigation-item--pop"><a href="#">Главная</a></li>
-                    <li class="navigation-item--pop"><a href="#">О компании</a></li>
-                    <li class="navigation-item--pop"><a href="#">Ответы на вопрос</a></li>
-                    <li class="navigation-item--pop"><a href="#">Усдуги</a></li>
-                    <li class="navigation-item--pop"><a href="#">Выполненные проекты</a></li>
-                    <li class="navigation-item--pop"><a href="#">Контакты</a></li>
-                    <li class="navigation-item--pop"><a href="#">Каталог</a></li>
-                    <li class="navigation-item--pop"><a href="#">Отзывы</a></li>
+                    <li class="navigation-item--pop"><a href="about.html">О компании</a></li>
+                    <li class="navigation-item--pop"><a href="answers-questions.html">Ответы на вопрос</a></li>
+                    <li class="navigation-item--pop"><a href="services.html">Услуги</a></li>
+                    <li class="navigation-item--pop"><a href="works.html">Выполненные проекты</a></li>
+                    <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
+                    <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
+                    <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
                     <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
                 </ul>
                 <div class="pop-connection pop-connection--footer connection">
@@ -896,6 +896,34 @@
 
        </div>
    </div>
+   <div class="modal-order-call">
+        <div class="modal-order-call--block">
+            <h2 class="order-call-header">Оставить заявку</h2>
+            <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
+            <form class="modal-order-call--form">
+                <fieldset class="modal-order-call--fieldset">
+                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя">
+                    <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99">
+                    <input type="email" class="order-call-input order-call-mail" placeholder="E-mail">
+                    <textarea name="coments"  cols="30" rows="10"></textarea>
+                </fieldset>
+                <div class="conteiner-button">
+                    <button class="order-call-button" type="submit">Заказать звонок</button>                    
+                </div>
+                <div class="consultation-form--approval">
+                    <input class="consultation-form--checkbox visually-hidden" id="checkbox" type="checkbox" name="approval" required checked>
+                    <label for="checkbox" class="consultation-form--subtitle">Даю согласие на обработку <a href="#">персональных данных</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="close-modal">
+
+        </div>
+    </div>
+   
+
+   
+   
    <div class="modal-shadow">
 
    </div>
