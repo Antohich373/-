@@ -49,7 +49,7 @@
                         <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
                         <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
                         <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
-                        <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                        <li class="navigation-item--pop"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
                     </ul>
                     <div class="pop-connection connection">
                         <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
@@ -75,7 +75,7 @@
               </div>
               <div class="preview-subtitle">С гарантией от засорения 50 лет </div>
               <div class="preview-application application">
-                  <button class="button-application button" type="button">
+                  <button class="button-application button leave-request--button" type="button">
                       Оставить заявку <br>
                       <span class="button-application--subtitle">на консультацию с инженером </span>
                   </button>
@@ -330,7 +330,7 @@
                             <h2 class="stages-item--header">Выезд мастера </h2>
                             <p class="stages-item--text">Мастер бесплатно <br> выезжает на замер</p>
                         </div>
-                        <button class="stages-item--button button">Оставить заявку</button>
+                        <button class="stages-item--button button leave-request--button">Оставить заявку</button>
                     </li>
                     <li class="stages-item">
                         <div class="stages-item--card">
@@ -845,7 +845,7 @@
                     <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
                     <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
                     <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
-                    <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                    <li class="navigation-item--pop"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
                 </ul>
                 <div class="pop-connection pop-connection--footer connection">
                     <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
@@ -878,9 +878,9 @@
        <div class="modal-order-call--block">
             <h2 class="order-call-header">Заказать звонок</h2>
             <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
-            <form class="modal-order-call--form">
+            <form class="modal-order-call--form" method="POST">
                 <fieldset class="modal-order-call--fieldset">
-                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя">
+                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя" minlength="2" maxlength="20">
                     <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99">
                 </fieldset>
                 <div class="conteiner-button">
@@ -896,16 +896,16 @@
 
        </div>
    </div>
-   <div class="modal-order-call">
+   <div class="leave-request">
         <div class="modal-order-call--block">
             <h2 class="order-call-header">Оставить заявку</h2>
             <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
-            <form class="modal-order-call--form">
+            <form class="modal-order-call--form modal-order-call--form-request">
                 <fieldset class="modal-order-call--fieldset">
-                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя">
-                    <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99">
-                    <input type="email" class="order-call-input order-call-mail" placeholder="E-mail">
-                    <textarea name="coments"  cols="30" rows="10"></textarea>
+                    <input type="text" class="order-call-input order-call-name order-call-name-request" placeholder="Ваше имя" minlength="2" maxlength="20">
+                    <input type="tel" class="order-call-input order-call-tel order-call-tel-request" placeholder="+7 (999) 999-99-99">
+                    <input type="email" class="order-call-input order-call-mail" placeholder="E-mail" minlength="13" maxlength="20">
+                    <textarea class="order-call-text" name="coments"  cols="100" rows="10" placeholder="Ваш коментарий" maxlength="100"></textarea>
                 </fieldset>
                 <div class="conteiner-button">
                     <button class="order-call-button" type="submit">Заказать звонок</button>                    
@@ -916,11 +916,20 @@
                 </div>
             </form>
         </div>
-        <div class="close-modal">
+        <div class="close-modal-request">
 
         </div>
     </div>
-   
+    <div class="successful-sending">
+        <div class="successful-sending--block">
+            <h2 class="successful-sending--header">Успешно!</h2>
+            <p class="successful-sending--text">Мы уже получили заявку<strong class="successful-sending--strong"> закрепили за вами скидку 10% <br> на монтаж</strong> и в ближайшее время свяжемся с вами. Пожалуйста, оставайтесь на связи!</p>
+            <button class="successful-sending--button btn" type="button">Закрыть</button>
+        </div>
+        <div class="close-modal-successful">
+
+        </div>
+    </div>
 
    
    

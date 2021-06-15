@@ -113,6 +113,21 @@ new Swiper('.reviews-container', {
         }
     }
 });
+
+new Swiper('.product-page-container', {
+    navigation: {
+        nextEl: '.button-slid-next',
+        prevEl: '.button-slid-prev',
+      },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    thumbs: {
+        swiper: {
+            el: '.product-page-min-container',
+            slidesPerView: 5,
+        }
+    }
+});
 //
 
 //ТЕСТОВЫЙ СКРИПТ
@@ -226,10 +241,13 @@ for( let i = 0; i < openCallModal.length; i++ ){
 closeModal.addEventListener('click', function() {
     callModal.classList.remove('modal-order-call-active')
     modalShadow.classList.remove('modal-shadow-active') 
+    leaveRequest.classList.remove('leave-request-active')
 })
 modalShadow.addEventListener('click', function() {
     callModal.classList.remove('modal-order-call-active')
     modalShadow.classList.remove('modal-shadow-active') 
+    leaveRequest.classList.remove('leave-request-active')
+    document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
 })
 window.addEventListener('keydown', function(evt){
     if(evt.keyCode === 27){
@@ -237,9 +255,32 @@ window.addEventListener('keydown', function(evt){
        if(modalShadow.classList.contains('modal-shadow-active') || callModal.classList.contains('modal-order-call-active')){
         modalShadow.classList.remove('modal-shadow-active');
         callModal.classList.remove('modal-order-call-active');
+        leaveRequest.classList.remove('leave-request-active')
        }  
     }   
 });
+//
+
+//Оставить заявку 
+let leaveRequest = document.querySelector('.leave-request')
+let leaveRequestButton = document.querySelectorAll('.leave-request--button')
+console.log(leaveRequestButton)
+let closeModalRequest = document.querySelector('.close-modal-request')
+
+for( let i = 0; i < leaveRequestButton.length; i++ ){
+    leaveRequestButton[i].addEventListener('click', function() {
+        console.log('click')
+        leaveRequest.classList.add('leave-request-active')
+        modalShadow.classList.add('modal-shadow-active') 
+        document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
+    })     
+}
+
+closeModalRequest.addEventListener('click', function() {
+    leaveRequest.classList.remove('leave-request-active')
+    modalShadow.classList.remove('modal-shadow-active') 
+})
+
 //
 
 //ОТВЕТЫ НА ВОПРОСЫ
@@ -259,6 +300,29 @@ for( let i = 0; i < headerCategory.length; i++ ){
 }   
 //
 
+//Ошибка не заполненых полей
+let modalOrderCallForm = document.querySelector('.modal-order-call--form')
+let inputName = document.querySelector('.order-call-name')
+let inputTel = document.querySelector('.order-call-tel')
+
+let successfuSending = document.querySelector('.successful-sending')
+
+let modalOrderCallFormRequest = document.querySelector('.modal-order-call--form-request')
+let inputNameRequest = document.querySelector('.order-call-name-request')
+let inputTelRequest = document.querySelector('.order-call-tel-request')
+let inputEmailRequest = document.querySelector('.order-call-mail')
+
+modalOrderCallFormRequest.addEventListener('submit', function(evt){
+    if(!inputNameRequest.value){
+        inputNameRequest.classList.add('eror-input')
+    }
+    if(!inputTelRequest.value){
+        inputTelRequest.classList.add('eror-input')
+    }
+    if(!inputEmailRequest.value){
+        inputEmailRequest.classList.add('eror-input')
+    }
+})
 //ФИЛЬТР ТОВАРОВ
 let buttonFiltrOpen = document.querySelector('.catalog-button')
 let filtr = document.querySelector('.filtrs')
