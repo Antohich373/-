@@ -9,7 +9,7 @@
     <title>О нас</title>
 </head>
 <body class="page-body dublik-header body-dublik">
-   <header class="page-header  header-index">
+   <header class="page-header  header-index dublik-header">
         <div class="header-wrap">
             <nav class="header-nav">
                 <a class="header__logo" href="index.html">
@@ -64,14 +64,16 @@
         </div>
    </header> 
    <main>
-    <ul class="navigation-inex--list">
-        <li class="navigation-inex--item">
-            <a class="" href="index.html">Главная</a>
-        </li>
-        <li class="navigation-inex--item">
-            О компании
-        </li>
-    </ul>
+    <section class="nav-top">
+        <ul class="navigation-inex--list">
+            <li class="navigation-inex--item">
+                <a class="" href="index.html">Главная</a>
+            </li>
+            <li class="navigation-inex--item">
+                О компании
+            </li>
+        </ul>        
+    </section>
     <section class="about">
         <div class="about-wrap wrap">
             <div class="about-container">
@@ -168,6 +170,74 @@
             </div>
         </div>
     </section>
+    <section class="statistics">
+        <h2 class="statistics-header">Юнитек в <span class="color-orange">цифрах</span></h2>
+        <div class="statistics-container swiper-container">
+            <div class="statistics-wrapper swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">10 лет</h2>
+                        <p class="statistics-cards--text">Специализации <br> по инженерным системам</p>                            
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">до 50 лет</h2>
+                        <p class="statistics-cards--text">Лет гарантия <br> на изделия</p>                            
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">до 300</h2>
+                        <p class="statistics-cards--text">Сданных объектов <br> в год </p>                            
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">10-20 лет</h2>
+                        <p class="statistics-cards--text">Стаж строительных работ <br> у наших специалистов</p>                            
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">100%</h2>
+                        <p class="statistics-cards--text">Успешно завершенных <br> проектов</p>                            
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="statistics-cards statistics-cards-one">
+                        <h2 class="statistics-cards--header">30</h2>
+                        <p class="statistics-cards--text">Городов–география <br> сданных объектов</p>                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="advantages">
+        <div class="advantages-wrap wrap">
+            <div class="advantages-content">
+                <h2 class="advantages-header"><span class="color-orange">Преимущества</span> <br> компании</h2>
+                <ul class="advantages-list">
+                    <li class="advantages-item">
+                        <img class="advantages-item--img" src="image/advantages-1.png" width="74" height="74">
+                        <p class="advantages-item--text">Стоимость работ не поднимется и прописана в договоре</p>
+                    </li>
+                    <li class="advantages-item">
+                        <img class="advantages-item--img" src="image/advantages-2.svg" width="74" height="74">
+                        <p class="advantages-item--text">Сдача обьекта точно в срок, указанный в договоре</p>
+                    </li>
+                    <li class="advantages-item">
+                        <img class="advantages-item--img" src="image/advantages-3.png" width="74" height="74">
+                        <p class="advantages-item--text">Каждое изделие нумеруется. Сотрудник несет персональную ответственность за произведенное им изделие либо этап работ</p>
+                    </li>
+                    <li class="advantages-item">
+                        <img class="advantages-item--img" src="image/advantages-4.png" width="74" height="74">
+                        <p class="advantages-item--text">Полный цикл взаимодействия с клиентом: производство, монтаж, сервис, обслуживание</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
    </main>
    <footer class="footer">
     <div class="wrap">
@@ -176,7 +246,7 @@
                 <a class="pop__logo" href="index">
                     <picture>
                         <source media="(min-width: 768px)" srcset="image/header-logo-nav-desctop.png">
-                        <img class="pop-img" src="image/header-logo-nav-mobile.png" width="151" height="51" alt="Логотип ЮНИТЕК">
+                        <img class="pop-img" src="image/header-logo-nav-desctop.png" width="228" height="78" alt="Логотип ЮНИТЕК">
                     </picture>
                 </a>                    
             </div>

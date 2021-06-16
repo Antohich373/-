@@ -269,7 +269,6 @@ let closeModalRequest = document.querySelector('.close-modal-request')
 
 for( let i = 0; i < leaveRequestButton.length; i++ ){
     leaveRequestButton[i].addEventListener('click', function() {
-        console.log('click')
         leaveRequest.classList.add('leave-request-active')
         modalShadow.classList.add('modal-shadow-active') 
         document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
