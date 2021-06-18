@@ -11,18 +11,17 @@ closeNav.addEventListener('click', function() {
     document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
     modalShadow.classList.remove('modal-shadow-active');
 })
-// let play = document.querySelector('.specific-service-play-one')
-// document.addEventListener('click', function(e) {
-//     if (e.target.id != 'sss') {
-//         document.querySelector('.sisisa').style.setProperty('z-index', '-1')
-//     }
-//   });
-// play.addEventListener('click', function() {
-//     document.querySelector('.sisisa').style.setProperty('z-index', '1')
-// })
 
+//Наши работы
+document.querySelector('.button-photo').addEventListener('click', function() {
+    document.querySelector('.our-works-list-video').style.setProperty('display', 'none')
+    document.querySelector('.our-works-list-photo').style.setProperty('display', 'grid')
+})
 
-
+document.querySelector('.button-video').addEventListener('click', function() {
+    document.querySelector('.our-works-list-video').style.setProperty('display', 'grid')
+    document.querySelector('.our-works-list-photo').style.setProperty('display', 'none')
+})
 
 //СЛАЙДЕР У ШАПКИ
 new Swiper('.features-container', {
@@ -141,7 +140,11 @@ new Swiper('.product-page-container', {
     }
 });
 //
+{/* <div id="elem" data-num="1000" data-my-num="2000"></div>
+let elem = document.querySelector('#elem');
 
+alert(elem.getAttribute('data-num'));  
+alert(elem.getAttribute('data-my-num')); */}
 //ТЕСТОВЫЙ СКРИПТ
 let quiz = document.querySelectorAll('.quiz')
 for(let i = 0; i < quiz.length; i++){
