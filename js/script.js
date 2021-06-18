@@ -12,16 +12,6 @@ closeNav.addEventListener('click', function() {
     modalShadow.classList.remove('modal-shadow-active');
 })
 
-//Наши работы
-document.querySelector('.button-photo').addEventListener('click', function() {
-    document.querySelector('.our-works-list-video').style.setProperty('display', 'none')
-    document.querySelector('.our-works-list-photo').style.setProperty('display', 'grid')
-})
-
-document.querySelector('.button-video').addEventListener('click', function() {
-    document.querySelector('.our-works-list-video').style.setProperty('display', 'grid')
-    document.querySelector('.our-works-list-photo').style.setProperty('display', 'none')
-})
 
 //СЛАЙДЕР У ШАПКИ
 new Swiper('.features-container', {
@@ -159,9 +149,9 @@ for(let i = 0; i < quiz.length; i++){
         change_block("-")
     })
     
-    change_block('+')
+    change_block()
     
-    function change_block(type) {
+    function change_block(type = null) {
         for( let i = 0; i < blokItem.length; i++ ) {
             
             blokItem[i].classList.remove('quiz-question-active')
@@ -178,6 +168,8 @@ for(let i = 0; i < quiz.length; i++){
                             break;
                         case "-":
                             current = i - 1
+                            break;
+                        default:
                             break;
                     }
     
@@ -333,7 +325,6 @@ window.addEventListener('keydown', function(evt){
 //Оставить заявку 
 let leaveRequest = document.querySelector('.leave-request')
 let leaveRequestButton = document.querySelectorAll('.leave-request--button')
-console.log(leaveRequestButton)
 let closeModalRequest = document.querySelector('.close-modal-request')
 
 for( let i = 0; i < leaveRequestButton.length; i++ ){
@@ -402,3 +393,18 @@ closeFilter.addEventListener('click',function() {
     filtr.classList.remove('filtrs-activ')
 })
 //
+//Наши работы
+document.querySelector('.button-photo').addEventListener('click', function() {
+    document.querySelector('.our-works-list-video').style.setProperty('display', 'none')
+    document.querySelector('.our-works-list-photo').style.setProperty('display', 'grid')
+})
+
+document.querySelector('.button-video').addEventListener('click', function() {
+    document.querySelector('.our-works-list-video').style.setProperty('display', 'grid')
+    document.querySelector('.our-works-list-photo').style.setProperty('display', 'none')
+})
+
+document.querySelector('.play').addEventListener('click', function() {
+    document.querySelector('.lanjbox').style.display = ('flex')
+    console.log('click')
+})
