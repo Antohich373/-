@@ -30,7 +30,13 @@
     font-style: normal;
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
     font-family: "Oswald", "Arial", sans-serif;
