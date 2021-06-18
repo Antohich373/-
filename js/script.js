@@ -11,6 +11,18 @@ closeNav.addEventListener('click', function() {
     document.querySelector('.header-nav--pop').classList.remove('header-nav--pop-open')
     modalShadow.classList.remove('modal-shadow-active');
 })
+// let play = document.querySelector('.specific-service-play-one')
+// document.addEventListener('click', function(e) {
+//     if (e.target.id != 'sss') {
+//         document.querySelector('.sisisa').style.setProperty('z-index', '-1')
+//     }
+//   });
+// play.addEventListener('click', function() {
+//     document.querySelector('.sisisa').style.setProperty('z-index', '1')
+// })
+
+
+
 
 //СЛАЙДЕР У ШАПКИ
 new Swiper('.features-container', {
@@ -131,39 +143,93 @@ new Swiper('.product-page-container', {
 //
 
 //ТЕСТОВЫЙ СКРИПТ
-let blokItem = document.querySelectorAll('.blok');
-let current = 0;
-let prev = document.querySelector('.prev');
-let next = document.querySelector('.next');
-next.addEventListener('click', function() {
-    change_block("+")
-})
-prev.addEventListener('click', function() {
-    change_block("-")
-})
-function change_block(type) {
-    for( let i = 0; i < blokItem.length; i++ ) {
-        blokItem[i].classList.remove('block-active')
-    }
-    for( let i = 0; i < blokItem.length; i++ ) {
-        if (i == current) {
-            if (blokItem[current]) {
-                switch (type) {
-                    case "+":
-                        current = i + 1
-                        blokItem[current].classList.add('block-active')
-                        break;
-                    case "-":
-                        current = i - 1
-                        blokItem[current].classList.add('block-active')
-                        break;
-                }
-            } 
-            break
+let quiz = document.querySelectorAll('.quiz')
+for(let i = 0; i < quiz.length; i++){
+    let blokItem = quiz[i].querySelectorAll('.quiz-question');
+    let current = 0;
+    let prev = quiz[i].querySelector('.quiz-button--prev');
+    let next = quiz[i].querySelector('.quiz-button--next');
+    next.addEventListener('click', function() {
+        change_block("+")
+    })
+    prev.addEventListener('click', function() {
+        change_block("-")
+    })
+    
+    change_block('+')
+    
+    function change_block(type) {
+        for( let i = 0; i < blokItem.length; i++ ) {
+            
+            blokItem[i].classList.remove('quiz-question-active')
+            setTimeout(function() {
+                blokItem[i].style.setProperty('display', 'none')
+            }, 300)
+        }
+        for( let i = 0; i < blokItem.length; i++ ) {
+            if (i == current) {
+                if (blokItem[current]) {
+                    switch (type) {
+                        case "+":
+                            current = i + 1
+                            break;
+                        case "-":
+                            current = i - 1
+                            break;
+                    }
+    
+                    setTimeout(function() {
+                        blokItem[current].style.setProperty('display', 'block')
+                        blokItem[current].classList.add('quiz-question-active')
+                    }, 300)
+                } 
+                break
+            }
+        }
+        if(current === 0) {
+            quiz[i].querySelector('.quiz-button--prev').classList.add('quiz-button--prev-active')
+            quiz[i].querySelector('.range-color').style.width = '30px';
+        }else {
+            quiz[i].querySelector('.quiz-button--prev').classList.remove('quiz-button--prev-active')
+        }
+        if(current === 6) {
+            quiz[i].querySelector('.quiz-button--next').classList.add('quiz-button--next-active')
+        }else {
+            quiz[i].querySelector('.quiz-button--next').classList.remove('quiz-button--next-active')
+        }
+    
+        if(current === 0) {
+            quiz[i].querySelector('.range-color').style.width = '16.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '1'
+        }
+        if(current === 1) {
+            quiz[i].querySelector('.range-color').style.width = '33%';
+            quiz[i].querySelector('.range-text--number').textContent = '2'
+        }
+        if(current === 2) {
+            quiz[i].querySelector('.range-color').style.width = '49.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '3'
+        }
+        if(current === 3) {
+            quiz[i].querySelector('.range-color').style.width = '66%';
+            quiz[i].querySelector('.range-text--number').textContent = '4'
+        }
+        if(current === 4) {
+            quiz[i].querySelector('.range-color').style.width = '82.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '5'
+        }
+        if(current === 5) {
+            quiz[i].querySelector('.range-color').style.width = '100%';
+            quiz[i].querySelector('.range-text--number').textContent = '6'
+        }
+        if(current === 6) {
+            quiz[i].querySelector('.range').style.display = 'none';
+        }else {
+            quiz[i].querySelector('.range').style.display = 'block';
         }
     }
-    console.log(current)
 }
+
 //
 
 //МАСКА НА ТЕЛЕФОН
