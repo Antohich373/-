@@ -1375,7 +1375,7 @@ input[type="radio"].visually-hidden {
     background: linear-gradient(180deg, #F8BB1D 0%, #F8981D 100%);
     box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
     border-radius: 100px;
-    transition: all 1s;
+    transition: all 0.3s;
     z-index: 0;
 }
 
@@ -1425,8 +1425,6 @@ input[type="radio"].visually-hidden {
     text-align: center;
     color: #4B4242;
     z-index: 1;
-    background-color: #fff;
-    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
     border-radius: 6px;
     width: 300px;
     box-sizing: border-box;
@@ -1435,48 +1433,97 @@ input[type="radio"].visually-hidden {
     top: 260px;
     z-index: -1;
     pointer-events: none;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 768px) {
+    .description-popup {
+        background: none;
+        box-shadow: none;
+    }
     .description-popup-met-no-odors {
         left: 220px;
-        top:  115px;
-        clip-path: polygon(45% 9%, 42% 5%, 42% 0, 0 0, 0 100%, 100% 100%, 100% 0, 60% 0, 60% 5%, 57% 10%, 53% 11%, 49% 11%);
+        top:  85px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
     .description-popup-met-no-chemistry {
-        left: 270px;
-        top: 305px;
-        clip-path: polygon(45% 9%, 42% 5%, 42% 0, 0 0, 0 100%, 100% 100%, 100% 0, 60% 0, 60% 5%, 57% 10%, 53% 11%, 49% 11%);
+        left: 260px;
+        top: 275px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
     .description-popup-met-testing-detector {
-        left: 210px;
-        top: 405px;
-        clip-path: polygon(45% 9%, 42% 5%, 42% 0, 0 0, 0 100%, 100% 100%, 100% 0, 60% 0, 60% 5%, 57% 10%, 53% 11%, 49% 11%);
+        left: 207px;
+        top: 375px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
     .description-popup-met-pressure-test {
-        left: 160px;
-        top: 315px;
-        clip-path: polygon(45% 9%, 43% 5%, 42% 0, 0 0, 0 100%, 100% 100%, 100% 0, 60% 0, 59% 5%, 57% 10%, 53% 11%, 49% 11%);
+        left: 125px;
+        top: 290px;
+        background-image: url('../image/card-description-bol.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 195px;
+        width: 350px;
     }
     .description-popup-met-welding-technologies {
-        left: 20px;
-        top: 467px;
+        left: -19px;
+        top: 440px;
+        background-image: url('../image/card-description-bol.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 195px;
+        width: 350px;
     }
     .description-popup-met-skinny {
-        left: -70px;
-        top: 355px;
+        left: -80px;
+        top: 325px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
     .description-popup-met-cold-protection {
-        left: -60px;
-        top: 225px;
+        left: -70px;
+        top: 205px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 70px;
+        height: 135px;
     }
     .description-popup-met-protection-electrical {
-        left: 15px;
-        top: 85px;
+        left: 10px;
+        top: 55px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
     .description-popup-met-blockage-protection {
-        left: 155px;
-        top: 30px;
+        left: 150px;
+        top: 5px;
+        background-image: url('../image/card-description.png');
+        background-size: cover;
+        background-position: 0 0px;
+        padding-top: 50px;
+        height: 135px;
     }
 }
 
@@ -1879,6 +1926,13 @@ input[type="radio"].visually-hidden {
 
 .consultation-dublik {
     background: #FDFDFD;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .consultation-dublik {
+        padding-bottom: 80px;
+    }
 }
 
 .consultation-block {
@@ -2119,8 +2173,8 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: 1330px) {
     .statistics {
-        padding-top: 140px;
-        padding-bottom: 100px;
+        padding-top: 190px;
+        padding-bottom: 110px;
     }
 }
 
