@@ -135,7 +135,7 @@
                                     Вопрос <span class="range-text--number"></span>/6
                                 </div>
                             </div>
-                            <form class="quiz-body">
+                            <form class="quiz-body" >
                                 <div class="quiz-question quiz-question-1">
                                     <h2 class="quiz-question-header">Какой вариант ЛОС (локальное очистное сооружение) вы рассматриваете?</h2>
                                     <div class="quiz-question--box quiz-question--box-1">
@@ -258,26 +258,72 @@
                                 </div>
                                 <div class="quiz-question quiz-question-1">
                                     <h2 class="quiz-question-header">Куда бы вы хотели отводить очищенную воду?</h2>
-                                    <div class="quiz-question--box quiz-question--box-1">
-                                        <div class="quis-radio">
-                                            <input class="visually-hidden input-radio--quiz" id="quiz-radio-sewage" type="radio" name="quiz-6" value="Ливневая канализация">
-                                            <label for="quiz-radio-sewage">
-                                                <div><img class="img-radio" src="image/sewage.png" width="135" height="146"></div>
-                                                <div class="quiz-cheked">
-                                                    <span class="quiz-radio"></span>
-                                                    <p class="quiz-radio--name quiz-radio--name-6">Ливневая <br> канализация</p>
+                                    <div class="quiz-question--box quiz-question--box-1 quiz-question--box--slider">
+                                        <div class="prev-quiz-question quiz-question-strech"></div>
+                                        <div class="next-quiz-question quiz-question-strech"></div>
+                                        <div class="quiz-question--slider swiper-container">
+                                            <div class="quiz-question-wrapper swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-peaty" type="radio" name="quiz-5" value="Торфяной">
+                                                        <label for="quiz-radio-peaty">
+                                                            <div><img class="img-radio" src="image/torfin.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Торфяной</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </label>
-                                        </div>
-                                        <div class="quis-radio">
-                                            <input class="visually-hidden input-radio--quiz" id="quiz-radio-pit" type="radio" name="quiz-6" value="Рассеивающий колодец">
-                                            <label for="quiz-radio-pit">
-                                                <div><img class="img-radio" src="image/pit.png" width="135" height="146"></div>
-                                                <div class="quiz-cheked">
-                                                    <span class="quiz-radio"></span>
-                                                    <p class="quiz-radio--name quiz-radio--name-6">Рассеивающий <br> колодец</p>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-sandy" type="radio" name="quiz-5" value="Песчаный">
+                                                        <label for="quiz-radio-sandy">
+                                                            <div><img class="img-radio" src="image/pesok.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Песчаный</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </label>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-clay" type="radio" name="quiz-5" value="Глинистый">
+                                                        <label for="quiz-radio-clay">
+                                                            <div><img class="img-radio" src="image/glina.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Глинистый</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-quicksand" type="radio" name="quiz-5" value="Плывун">
+                                                        <label for="quiz-radio-quicksand">
+                                                            <div><img class="img-radio" src="image/plivun.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">«Плывун»</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-hz" type="radio" name="quiz-5" value="Затрудняюсь ответить">
+                                                        <label for="quiz-radio-hz">
+                                                            <div><img class="img-radio" src="image/vopros.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Затрудняюсь ответить</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -458,7 +504,7 @@
                             <h2 class="consultation-text--header">Нужна консультация?</h2>
                             <p class="consultation-text--subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
                         </div>
-                        <form class="consultation-form" method="GET"  autocomplete="off">
+                        <form class="consultation-form" method="POST"  autocomplete="off">
                             <div class="consultation-form--wrap">
                             <fieldset class="consultation-fieldset">
                                 <input class="consultation-input consultation-input--name" type="text" name="name" placeholder="Ваше имя" required minlength="2" max="16">
@@ -1329,8 +1375,8 @@
             <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
             <form class="modal-order-call--form" method="POST">
                 <fieldset class="modal-order-call--fieldset">
-                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя" minlength="2" maxlength="20">
-                    <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99">
+                    <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя" minlength="2" maxlength="20" required>
+                    <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99" required>
                 </fieldset>
                 <div class="conteiner-button">
                     <button class="order-call-button" type="submit">Заказать звонок</button>                    
@@ -1349,15 +1395,15 @@
         <div class="modal-order-call--block">
             <h2 class="order-call-header">Оставить заявку</h2>
             <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
-            <form class="modal-order-call--form modal-order-call--form-request">
+            <form class="modal-order-call--form-request">
                 <fieldset class="modal-order-call--fieldset">
-                    <input type="text" class="order-call-input order-call-name order-call-name-request" placeholder="Ваше имя" minlength="2" maxlength="20">
-                    <input type="tel" class="order-call-input order-call-tel order-call-tel-request" placeholder="+7 (999) 999-99-99">
+                    <input type="text" class="order-call-input order-call-name order-call-name-request" placeholder="Ваше имя" minlength="2" maxlength="20" required>
+                    <input type="tel" class="order-call-input order-call-tel order-call-tel-request" placeholder="+7 (999) 999-99-99" required>
                     <input type="email" class="order-call-input order-call-mail" placeholder="E-mail" minlength="13" maxlength="20">
                     <textarea class="order-call-text" name="coments"  cols="100" rows="10" placeholder="Ваш коментарий" maxlength="100"></textarea>
                 </fieldset>
                 <div class="conteiner-button">
-                    <button class="order-call-button" type="submit">Заказать звонок</button>                    
+                    <button class="contacts-button button open-cal" type="submit">Заказать звонок</button>                    
                 </div>
                 <div class="consultation-form--approval">
                     <input class="consultation-form--checkbox visually-hidden" id="checkbox" type="checkbox" name="approval" required checked>
@@ -1382,7 +1428,321 @@
    <div class="modal-shadow">
 
    </div>
+   <div class="lanjbox">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ipAnwilMncI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script>
+   <script>
+    //форма Записать на консультацию
+    document.querySelector('.consultation-form').addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    var data = new FormData(this) // Сборка формы 
+    var url = 'https://jsonplaceholder.typicode.com/posts'
+    fetch(url, {
+        method: 'post',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: data // Отправка самой формы
+      })
+      .then(response => response.json())
+      .then((json) => { // Ответ
+        if (json.id === 101) { // Для примера проверка пройдена если id === 101
+          // Добавление поля
+            document.querySelector('.successful-sending').classList.add('successful-sending--active')
+            modalShadow.classList.add('modal-shadow-active') 
+            document.querySelector('.consultation-input--name').value = ''
+            document.querySelector('.consultation-input--tel').value = ''
+        }else {
+          console.log(json)
+        }
+  
+      })
+      .catch(err => console.log(err));
+  })
+
+    //quiz
+    let quizBody = document.querySelectorAll('.quiz-body')
+    for(let i = 0; i < quizBody.length; i++){
+        quizBody[i].addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        var data = new FormData(this) // Сборка формы 
+        var url = 'https://jsonplaceholder.typicode.com/posts'
+        fetch(url, {
+            method: 'post',
+            headers: {
+            "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+            },
+            body: data // Отправка самой формы
+        })
+        .then(response => response.json())
+        .then((json) => { // Ответ
+            if (json.id === 101) { // Для примера проверка пройдена если id === 101
+            // Добавление поля
+                document.querySelector('.successful-sending').classList.add('successful-sending--active')
+                modalShadow.classList.add('modal-shadow-active') 
+            }else {
+            console.log(json)
+            }
+    
+        })
+        .catch(err => console.log(err));
+        })
+    }
+
+  //СЛАЙДЕР У ШАПКИ
+new Swiper('.features-container', {
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: -23,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 10,
+            slidesPerView: 2,
+        },
+        1330: {
+            watchOverflow: true,
+            loop: false,
+            centeredSledes: false,
+            spaceBetween:-90,
+            slidesPerView: 4,
+        }
+    },
+});
+//
+
+//СЛАЙДЕР ЮНИТЕК В ЦИФРАХ
+new Swiper('.statistics-container', {
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: -23,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 10,
+            slidesPerView: 2,
+        },
+        1330: {
+            watchOverflow: false,
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 0,
+            slidesPerView: 999,
+        }
+    },
+});
+//
+
+//СЛАЙДЕР СДАЕМ ДО 300 ОБЬКУТОВ
+new Swiper('.work-container', {
+    navigation: {
+        nextEl: '.work-button-next',
+        prevEl: '.work-button-prev',
+      },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 30,
+            slidesPerView: 1,
+        },
+        1330: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+        }
+    }
+});
+//
+
+    //СЛАЙДЕР ОТЗЫВЫ
+    new Swiper('.reviews-container', {
+        navigation: {
+            nextEl: '.reviews-button-next',
+            prevEl: '.reviews-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
+            768: {
+                loop: false,
+                centeredSledes: false,
+                spaceBetween: 60,
+                slidesPerView: 2 ,
+            },
+            1020: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+            },
+            1330: {
+                spaceBetween: 10,
+                slidesPerView: 4,
+            }
+        }
+    });
+    //ТЕСТОВЫЙ СКРИПТ
+    let quiz = document.querySelectorAll('.quiz')
+    for(let i = 0; i < quiz.length; i++){
+        let blokItem = quiz[i].querySelectorAll('.quiz-question');
+        let current = 0;
+        let prev = quiz[i].querySelector('.quiz-button--prev');
+        let next = quiz[i].querySelector('.quiz-button--next');
+        next.addEventListener('click', function() {
+            change_block("+")
+        })
+        prev.addEventListener('click', function() {
+            change_block("-")
+        })
+        
+        change_block()
+    
+    function change_block(type = null) {
+        for( let i = 0; i < blokItem.length; i++ ) {
+            
+            blokItem[i].classList.remove('quiz-question-active')
+            setTimeout(function() {
+                blokItem[i].style.setProperty('display', 'none')
+            }, 300)
+        }
+        for( let i = 0; i < blokItem.length; i++ ) {
+            if (i == current) {
+                if (blokItem[current]) {
+                    switch (type) {
+                        case "+":
+                            current = i + 1
+                            break;
+                        case "-":
+                            current = i - 1
+                            break;
+                        default:
+                            break;
+                    }
+    
+                    setTimeout(function() {
+                        blokItem[current].style.setProperty('display', 'block')
+                        blokItem[current].classList.add('quiz-question-active')
+                    }, 300)
+                    if(i = 4){
+                    setTimeout(function() {
+                        new Swiper('.quiz-question--slider', {
+                            navigation: {
+                                nextEl: '.next-quiz-question',
+                                prevEl: '.prev-quiz-question',
+                            },
+                            breakpoints: {
+                                320: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 10,
+                                },
+                                768: {
+                                    loop: false,
+                                    centeredSledes: false,
+                                    spaceBetween: 60,
+                                    slidesPerView: 3 ,
+                                },
+                                1330: {
+                                    spaceBetween: 10,
+                                    slidesPerView: 4,
+                                }
+                            }                            
+                        }
+                    )}, 400)
+                    }
+                } 
+                break
+            }
+        }
+        if(current === 0) {
+            quiz[i].querySelector('.quiz-button--prev').classList.add('quiz-button--prev-active')
+            quiz[i].querySelector('.range-color').style.width = '30px';
+        }else {
+            quiz[i].querySelector('.quiz-button--prev').classList.remove('quiz-button--prev-active')
+        }
+        if(current === 6) {
+            quiz[i].querySelector('.quiz-button--next').classList.add('quiz-button--next-active')
+        }else {
+            quiz[i].querySelector('.quiz-button--next').classList.remove('quiz-button--next-active')
+        }
+    
+        if(current === 0) {
+            quiz[i].querySelector('.range-color').style.width = '16.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '1'
+        }
+        if(current === 1) {
+            quiz[i].querySelector('.range-color').style.width = '33%';
+            quiz[i].querySelector('.range-text--number').textContent = '2'
+        }
+        if(current === 2) {
+            quiz[i].querySelector('.range-color').style.width = '49.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '3'
+        }
+        if(current === 3) {
+            quiz[i].querySelector('.range-color').style.width = '66%';
+            quiz[i].querySelector('.range-text--number').textContent = '4'
+        }
+        if(current === 4) {
+            quiz[i].querySelector('.range-color').style.width = '82.5%';
+            quiz[i].querySelector('.range-text--number').textContent = '5'
+        }
+        if(current === 5) {
+            quiz[i].querySelector('.range-color').style.width = '100%';
+            quiz[i].querySelector('.range-text--number').textContent = '6'
+        }
+        if(current === 6) {
+            quiz[i].querySelector('.range').style.display = 'none';
+        }else {
+            quiz[i].querySelector('.range').style.display = 'block';
+        }
+    }
+    }
+    //ОТВЕТЫ НА ВОПРОСЫ
+    let answersItem = document.querySelectorAll('.answers-item');
+    for( let i = 0; i < answersItem.length; i++ ){
+    answersItem[i].addEventListener('click', function(){
+        this.classList.toggle('sisi');
+        this.classList.toggle('answers-item--text-open')
+    });
+    }
+    let headerCategory = document.querySelectorAll('.header-close')
+    for( let i = 0; i < headerCategory.length; i++ ){
+        headerCategory[i].addEventListener('click', function(){
+        this.classList.toggle('header-open');
+        this.classList.toggle('active');
+    });
+    }   
+    //
+    //ФИЛЬТР ТОВАРОВ
+    let buttonFiltrOpen = document.querySelector('.catalog-button')
+    let filtr = document.querySelector('.filtrs')
+    buttonFiltrOpen.addEventListener('click',function() {
+        filtr.classList.add('filtrs-activ')
+    })
+    let closeFilter = document.querySelector('.name-close')
+    closeFilter.addEventListener('click',function() {
+        filtr.classList.remove('filtrs-activ')
+    })
+    //
+    document.querySelector('.play').addEventListener('click', function() {
+        document.querySelector('.lanjbox').style.display = ('flex')
+    })
+
+    document.querySelector('.lanjbox').addEventListener('click', function() {
+        document.querySelector('.lanjbox').style.display = ('none')
+    })
+
+
+   </script>
 </body>
 </html>

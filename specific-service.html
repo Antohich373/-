@@ -23,7 +23,7 @@
                     <a class="header-mail header-mail-dublik" href="mailto:unitecseptik@gmail.com">unitecseptik@gmail.com</a>
                     <div class="header-call">
                         <a class="header-tel header-tel-dublik" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
-                        <button type="button" class="button-call button-call">Заказать звонок</button>                   
+                        <button type="button" class="button-call open-cal">Заказать звонок</button>                           
                     </div>                    
                 </div>
             </nav>
@@ -49,7 +49,7 @@
                         <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
                         <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
                         <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
-                        <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                        <li class="navigation-item--pop"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
                     </ul>
                     <div class="pop-connection connection">
                         <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
@@ -83,12 +83,11 @@
                 <h2 class="specific-service--header">Монтаж септиков и станций биологической очистки, монтаж кессонов и погребов</h2>
                 <div class="specific-service--video  specific-service--video-mobile">
                     <img class="specific-service-img" src="image/specific-service-img.png">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dSfjrymYO1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="specific-service-play"></div>            
                 </div>
                 <div class="specific-service-price">
                     <p class="specific-service-price--text">от 10 521 ₽</p>
-                    <button class="specific-service-price--button specific-service-price--button-mobile btn button" type="button">
+                    <button class="specific-service-price--button specific-service-price--button-mobile btn button leave-request--button" type="button">
                         Оставить заявку <br>
                         <span>на консультацию с инженером</span>
                     </button>
@@ -108,10 +107,9 @@
             <div class="specific-service--desctop">
                 <div class="specific-service--video">
                     <img class="specific-service-img" src="image/specific-service-img.png">
-                    <iframe class="sisisa" width="100%" height="100%" src="https://www.youtube.com/embed/dSfjrymYO1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div id="sss" class="specific-service-play specific-service-play-one"></div>            
                 </div>
-                <button class="specific-service-price--button btn button" type="button">
+                <button class="specific-service-price--button btn button leave-request--button" type="button">
                     Оставить заявку <br>
                     <span>на консультацию с инженером</span>
                 </button>
@@ -210,7 +208,7 @@
                     <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
                     <li class="navigation-item--pop"><a href="catalog.html">Каталог</a></li>
                     <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
-                    <li class="navigation-item--pop"><button class="navigation-item--button" type="button">Подобрать систему</button></a></li>
+                    <li class="navigation-item--pop"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
                 </ul>
                 <div class="pop-connection pop-connection--footer connection">
                     <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
@@ -231,7 +229,106 @@
         </div>       
     </div>
    </footer>
+   <div class="modal-order-call">
+    <div class="modal-order-call--block">
+         <h2 class="order-call-header">Заказать звонок</h2>
+         <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
+         <form class="modal-order-call--form" method="POST">
+             <fieldset class="modal-order-call--fieldset">
+                 <input type="text" class="order-call-input order-call-name" placeholder="Ваше имя" minlength="2" maxlength="20" required>
+                 <input type="tel" class="order-call-input order-call-tel" placeholder="+7 (999) 999-99-99" required>
+             </fieldset>
+             <div class="conteiner-button">
+                 <button class="order-call-button" type="submit">Заказать звонок</button>                    
+             </div>
+             <div class="consultation-form--approval">
+                 <input class="consultation-form--checkbox visually-hidden" id="checkbox" type="checkbox" name="approval" required checked>
+                 <label for="checkbox" class="consultation-form--subtitle">Даю согласие на обработку <a href="#">персональных данных</a></p>
+             </div>
+         </form>
+    </div>
+    <div class="close-modal">
+
+    </div>
+    </div>
+    <div class="leave-request">
+        <div class="modal-order-call--block">
+            <h2 class="order-call-header">Оставить заявку</h2>
+            <p class="order-call-subtitle">Заполните форму ниже, оставив свои контактные данные и мы свяжемся с вами в ближайшее время</p>
+            <form class="modal-order-call--form-request">
+                <fieldset class="modal-order-call--fieldset">
+                    <input type="text" class="order-call-input order-call-name order-call-name-request" placeholder="Ваше имя" minlength="2" maxlength="20" required>
+                    <input type="tel" class="order-call-input order-call-tel order-call-tel-request" placeholder="+7 (999) 999-99-99" required>
+                    <input type="email" class="order-call-input order-call-mail" placeholder="E-mail" minlength="13" maxlength="20">
+                    <textarea class="order-call-text" name="coments"  cols="100" rows="10" placeholder="Ваш коментарий" maxlength="100"></textarea>
+                </fieldset>
+                <div class="conteiner-button">
+                    <button class="order-call-button" type="submit">Заказать звонок</button>                    
+                </div>
+                <div class="consultation-form--approval">
+                    <input class="consultation-form--checkbox visually-hidden" id="checkbox" type="checkbox" name="approval" required checked>
+                    <label for="checkbox" class="consultation-form--subtitle">Даю согласие на обработку <a href="#">персональных данных</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="close-modal-request">
+
+        </div>
+    </div>
+    <div class="successful-sending">
+        <div class="successful-sending--block">
+            <h2 class="successful-sending--header">Успешно!</h2>
+            <p class="successful-sending--text">Мы уже получили заявку<strong class="successful-sending--strong"> закрепили за вами скидку 10% <br> на монтаж</strong> и в ближайшее время свяжемся с вами. Пожалуйста, оставайтесь на связи!</p>
+            <button class="successful-sending--button btn" type="button">Закрыть</button>
+        </div>
+        <div class="close-modal-successful">
+
+        </div>
+    </div>
+    <div class="modal-shadow">
+
+    </div>
+    <div class="lanjbox">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/ipAnwilMncI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    <script src="js/script.js"></script>
+   <script>
+    let frem = document.querySelectorAll('.specific-service--video')
+    for(let i = 0; i < frem.length; i++){
+        frem[i].addEventListener('click', function() {
+            document.querySelector('.lanjbox').style.display = ('flex')
+            console.log('clock')
+        })        
+    }
+    document.querySelector('.lanjbox').addEventListener('click', function() {
+        document.querySelector('.lanjbox').style.display = ('none')
+    })
+    //СЛАЙДЕР СДАЕМ ДО 300 ОБЬКУТОВ
+new Swiper('.work-container', {
+    navigation: {
+        nextEl: '.work-button-next',
+        prevEl: '.work-button-prev',
+      },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+        },
+        768: {
+            loop: false,
+            centeredSledes: false,
+            spaceBetween: 30,
+            slidesPerView: 1,
+        },
+        1330: {
+            spaceBetween: 10,
+            slidesPerView: 3,
+        }
+    }
+});
+//
+   </script>
 </body>
 </html>

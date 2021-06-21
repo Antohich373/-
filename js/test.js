@@ -12,67 +12,7 @@ closeNav.addEventListener('click', function() {
     modalShadow.classList.remove('modal-shadow-active');
 })
 
-  //Форма заказать звонок
-  document.querySelector('.modal-order-call--form').addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    var data = new FormData(this) // Сборка формы 
-    var url = 'https://jsonplaceholder.typicode.com/posts'
-    fetch(url, {
-        method: 'post',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: data // Отправка самой формы
-      })
-      .then(response => response.json())
-      .then((json) => { // Ответ
-        if (json.id === 101) { // Для примера проверка пройдена если id === 101
-          // Добавление поля
-          document.querySelector('.successful-sending').classList.add('successful-sending--active')
-          modalShadow.classList.add('modal-shadow-active')  
-          callModal.classList.remove('modal-order-call-active')
-          document.querySelector('.order-call-name').value = ''
-          document.querySelector('.order-call-tel').value = ''
-        }else {
-          console.log(json)
-        }
-  
-      })
-      .catch(err => console.log(err));
-  })
-
-  //Форма Отсавить заявку
-  document.querySelector('.modal-order-call--form-request').addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    var data = new FormData(this) // Сборка формы 
-    var url = 'https://jsonplaceholder.typicode.com/posts'
-    fetch(url, {
-        method: 'post',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: data // Отправка самой формы
-      })
-      .then(response => response.json())
-      .then((json) => { // Ответ
-        if (json.id === 101) { // Для примера проверка пройдена если id === 101
-          // Добавление поля
-          document.querySelector('.successful-sending').classList.add('successful-sending--active')
-          modalShadow.classList.add('modal-shadow-active')  
-          leaveRequest.classList.remove('leave-request-active')
-          document.querySelector('.order-call-name-request').value = ''
-          document.querySelector('.order-call-tel-request').value = ''
-          document.querySelector('.order-call-mail').value = ''
-          document.querySelector('.order-call-text').value = ''
-        }else {
-          console.log(json)
-        }
-  
-      })
-      .catch(err => console.log(err));
-  })
-
-  //МАСКА НА ТЕЛЕФОН
+//МАСКА НА ТЕЛЕФОН
 class PhoneMask {
     constructor(input) {
         this.input = input
@@ -133,8 +73,6 @@ document.querySelectorAll('[type=tel]').forEach(function(item) {
 })
 //
 
-
-//ЗАКАЗАТЬЗВОНОК
 let openCallModal = document.querySelectorAll('.open-cal')
 let closeModal = document.querySelector('.close-modal')
 let modalShadow = document.querySelector('.modal-shadow')
@@ -187,35 +125,78 @@ closeModalRequest.addEventListener('click', function() {
     leaveRequest.classList.remove('leave-request-active')
     modalShadow.classList.remove('modal-shadow-active') 
 })
-//
-
-//Ошибка не заполненых полей
-let modalOrderCallForm = document.querySelector('.modal-order-call--form')
-let inputName = document.querySelector('.order-call-name')
-let inputTel = document.querySelector('.order-call-tel')
-
-let successfuSending = document.querySelector('.successful-sending')
-
-let modalOrderCallFormRequest = document.querySelector('.modal-order-call--form-request')
-let inputNameRequest = document.querySelector('.order-call-name-request')
-let inputTelRequest = document.querySelector('.order-call-tel-request')
-let inputEmailRequest = document.querySelector('.order-call-mail')
-
-modalOrderCallFormRequest.addEventListener('submit', function(evt){
-    evt.preventDefault();
-    if(!inputNameRequest.value){
-        inputNameRequest.classList.add('eror-input')
-    }
-    if(!inputTelRequest.value){
-        inputTelRequest.classList.add('eror-input')
-    }
-    if(!inputEmailRequest.value){
-        inputEmailRequest.classList.add('eror-input')
-    }
-})
-
-//Удаление успешной отправки
+//Закрыть успешную заявку
 document.querySelector('.close-modal-successful').addEventListener('click', function() {
     document.querySelector('.successful-sending').classList.remove('successful-sending--active')
     modalShadow.classList.remove('modal-shadow-active') 
 })
+//
+  //Форма заказать звонок
+  document.querySelector('.modal-order-call--form').addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    var data = new FormData(this) // Сборка формы 
+    var url = 'https://jsonplaceholder.typicode.com/posts'
+    fetch(url, {
+        method: 'post',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: data // Отправка самой формы
+      })
+      .then(response => response.json())
+      .then((json) => { // Ответ
+        if (json.id === 101) { // Для примера проверка пройдена если id === 101
+          // Добавление поля
+          document.querySelector('.successful-sending').classList.add('successful-sending--active')
+          modalShadow.classList.add('modal-shadow-active')  
+          callModal.classList.remove('modal-order-call-active')
+        }else {
+          console.log(json)
+        }
+  
+      })
+      .catch(err => console.log(err));
+  })
+
+  //Форма Отсавить заявку
+  document.querySelector('.modal-order-call--form-request').addEventListener('submit', function(evt) {
+    evt.preventDefault();
+    var data = new FormData(this) // Сборка формы 
+    var url = 'https://jsonplaceholder.typicode.com/posts'
+    fetch(url, {
+        method: 'post',
+        headers: {
+          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+        },
+        body: data // Отправка самой формы
+      })
+      .then(response => response.json())
+      .then((json) => { // Ответ
+        if (json.id === 101) { // Для примера проверка пройдена если id === 101
+          // Добавление поля
+          document.querySelector('.successful-sending').classList.add('successful-sending--active')
+          modalShadow.classList.add('modal-shadow-active')  
+          leaveRequest.classList.remove('leave-request-active')
+        }else {
+          console.log(json)
+        }
+  
+      })
+      .catch(err => console.log(err));
+  })
+
+//ОТВЕТЫ НА ВОПРОСЫ
+let answersItem = document.querySelectorAll('.answers-item');
+for( let i = 0; i < answersItem.length; i++ ){
+  answersItem[i].addEventListener('click', function(){
+    this.classList.toggle('sisi');
+    this.classList.toggle('answers-item--text-open')
+  });
+}
+let headerCategory = document.querySelectorAll('.header-close')
+for( let i = 0; i < headerCategory.length; i++ ){
+    headerCategory[i].addEventListener('click', function(){
+    this.classList.toggle('header-open');
+    this.classList.toggle('active');
+  });
+}  
