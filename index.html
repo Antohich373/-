@@ -100,7 +100,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="features-cards features-cards-thie">
-                            <img class="features-img" src="image/piggy-bank-3 1.svg" alt="">
+                            <img class="features-img" src="image/piggy-bank-3.svg" alt="">
                             <p class="features-text">Низкие <br> эксплуатационные затраты</p>                            
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                                     </div>
                                 </div>
                                 <div class="quiz-question quiz-question-1">
-                                    <h2 class="quiz-question-header">Куда бы вы хотели отводить очищенную воду?</h2>
+                                    <h2 class="quiz-question-header">Тип грунта</h2>
                                     <div class="quiz-question--box quiz-question--box-1 quiz-question--box--slider">
                                         <div class="prev-quiz-question quiz-question-strech"></div>
                                         <div class="next-quiz-question quiz-question-strech"></div>
@@ -792,16 +792,17 @@
                                 <h2 class="catalog-item--header">Септик 1</h2>
                                 <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
                                 <span class="catalog-item--price">30 521 ₽</span>
-                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>                            
+                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>                           
                             </div>
                         </li>
                         <li class="catalog-item">
-                            <div class="catalog-item--block">
+                            <div class="catalog-item--block catalog-item--block-action">
                                 <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
                                 <h2 class="catalog-item--header">Септик 1</h2>
                                 <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
                                 <span class="catalog-item--price">30 521 ₽</span>
-                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>                               
+                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>  
+                                <span class="acton-product"></span>                              
                             </div>
                         </li>
                         <li class="catalog-item">
@@ -814,12 +815,13 @@
                             </div>
                         </li>
                         <li class="catalog-item">
-                            <div class="catalog-item--block">
+                            <div class="catalog-item--block catalog-item--block-action">
                                 <img class="catalog-item--img" src="image/catalog-img.png" width="135" height="142">
                                 <h2 class="catalog-item--header">Септик 1</h2>
                                 <p class="catalog-item--text">до 2х человек, 150 л/сутки</p>
                                 <span class="catalog-item--price">30 521 ₽</span>
-                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>                                
+                                <a href="product-page.html" class="catalog-item--button btn">Подробнее</a>  
+                                <span class="acton-product"></span>                               
                             </div>
                         </li>
                         <li class="catalog-item">
@@ -967,10 +969,8 @@
                         </div>
                     </div>    
                     <div class="reviews-button reviews-button-prev">
-                        <img src="image/reviews-next.png" width="100" height="100">
                     </div>
                     <div class="reviews-button reviews-button-next">
-                        <img src="image/reviews-next.png"  width="100" height="100">
                     </div>                  
                 </div>
             </div>
@@ -1121,27 +1121,73 @@
                                     </div>
                                 </div>
                                 <div class="quiz-question quiz-question-1">
-                                    <h2 class="quiz-question-header">Куда бы вы хотели отводить очищенную воду?</h2>
-                                    <div class="quiz-question--box quiz-question--box-1">
-                                        <div class="quis-radio">
-                                            <input class="visually-hidden input-radio--quiz" id="quiz-radio-sewage" type="radio" name="quiz-6" value="Ливневая канализация">
-                                            <label for="quiz-radio-sewage">
-                                                <div><img class="img-radio" src="image/sewage.png" width="135" height="146"></div>
-                                                <div class="quiz-cheked">
-                                                    <span class="quiz-radio"></span>
-                                                    <p class="quiz-radio--name quiz-radio--name-6">Ливневая <br> канализация</p>
+                                    <h2 class="quiz-question-header">Тип грунта</h2>
+                                    <div class="quiz-question--box quiz-question--box-1 quiz-question--box--slider">
+                                        <div class="prev-quiz-question quiz-question-strech"></div>
+                                        <div class="next-quiz-question quiz-question-strech"></div>
+                                        <div class="quiz-question--slider swiper-container">
+                                            <div class="quiz-question-wrapper swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-peaty" type="radio" name="quiz-5" value="Торфяной">
+                                                        <label for="quiz-radio-peaty">
+                                                            <div><img class="img-radio" src="image/torfin.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Торфяной</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </label>
-                                        </div>
-                                        <div class="quis-radio">
-                                            <input class="visually-hidden input-radio--quiz" id="quiz-radio-pit" type="radio" name="quiz-6" value="Рассеивающий колодец">
-                                            <label for="quiz-radio-pit">
-                                                <div><img class="img-radio" src="image/pit.png" width="135" height="146"></div>
-                                                <div class="quiz-cheked">
-                                                    <span class="quiz-radio"></span>
-                                                    <p class="quiz-radio--name quiz-radio--name-6">Рассеивающий <br> колодец</p>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-sandy" type="radio" name="quiz-5" value="Песчаный">
+                                                        <label for="quiz-radio-sandy">
+                                                            <div><img class="img-radio" src="image/pesok.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Песчаный</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </label>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-clay" type="radio" name="quiz-5" value="Глинистый">
+                                                        <label for="quiz-radio-clay">
+                                                            <div><img class="img-radio" src="image/glina.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Глинистый</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-quicksand" type="radio" name="quiz-5" value="Плывун">
+                                                        <label for="quiz-radio-quicksand">
+                                                            <div><img class="img-radio" src="image/plivun.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">«Плывун»</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="quis-radio quis-radio-slider">
+                                                        <input class="visually-hidden input-radio--quiz" id="quiz-radio-hz" type="radio" name="quiz-5" value="Затрудняюсь ответить">
+                                                        <label for="quiz-radio-hz">
+                                                            <div><img class="img-radio" src="image/vopros.png" width="135" height="146"></div>
+                                                            <div class="quiz-cheked">
+                                                                <span class="quiz-radio"></span>
+                                                                <p class="quiz-radio--name">Затрудняюсь ответить</p>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

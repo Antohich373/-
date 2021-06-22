@@ -1055,6 +1055,9 @@ input[type="radio"].visually-hidden {
     font-size: 19px;
     line-height: 140%;
     color: #4B4242;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px;
 }
 
 .features-wrapper {
@@ -3475,58 +3478,58 @@ input[type="radio"].visually-hidden {
     }
 }
 
-.reviews-button-next {
+.reviews-button {
     position: absolute;
-    top: calc(50% - 30px);
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 24px rgba(31, 2, 25, 0.16);
+    right: 0;
+    background-image: url('../image/pagintaion-right.png');
+    background-repeat: no-repeat;
+    background-position-y: 13px;
+    background-position-x: 8px;
+    cursor: pointer;
     z-index: 1;
-    right: -60px;
-    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.15));
-}
-
-.reviews-button-next img{
-    width: 70px;
-    height: 70px;
 }
 
 @media (min-width: 768px) { 
-    .reviews-button-next {
-        top: calc(50% - 30px);
-        right: 0;
+    .reviews-button {
+        width: 50px;
+        height: 50px;
+        background-position-y: 20px;
+        background-position-x: 15px;
     }
 }
 
-@media (min-width: 1330px) { 
-    .reviews-button-next {
-        right: 0;
-        top: calc(50% - 50px);
-    }
+.reviews-button-next {
+    top: 150px;
+    right: -45px;
 }
 
 .reviews-button-prev {
-    position: absolute;
-    top: calc(60% - 30px);
-    z-index: 1;
-    left: -60px;
-    filter: drop-shadow(0px 0px 14px rgba(0, 0, 0, 0.15)); 
+    top: 200px;
+    left: -45px; 
     transform: rotate(180deg);
 }
 
-.reviews-button-prev img{
-    width: 70px;
-    height: 70px;
-}
-
 @media (min-width: 768px) { 
+    .reviews-button-next {
+        top: 250px;
+        right: -5px;
+    }
+    
     .reviews-button-prev {
-        top: calc(50% - 30px);
-        left: 0px;
+        top: 250px;
+        left: -5px; 
     }
 }
 
-@media (min-width: 1330px) { 
-    .reviews-button-prev {
-        top: calc(50% - 50px);
-        left: -15px;
+@media (min-width: 1020px) { 
+    .reviews-button-next {
+        top: 250px;
+        right: 5px;
     }
 }
 
@@ -4456,6 +4459,65 @@ input[type="radio"].visually-hidden {
     background-color: #FFFFFF;
     border-radius: 15px;
     margin: 0 auto;
+    position: relative;
+}
+
+.acton-product {
+    position: absolute;
+    content: '';
+    width: 70px;
+    height: 65px;
+    object-fit: contain;
+    background-image: url('../image/action-mobile.png');
+    background-repeat: no-repeat;
+    top: -10px;
+    right: 0px;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) { 
+    .acton-product {
+        background-image: url('../image/action-desctop.png');
+        width: 100px;
+        height: 100px;
+        right: -10px;
+    }
+}
+
+.acton-product::after {
+    position: absolute;
+    content: 'Возможна рассрочка без %, подробности уточняйте у менеджера';
+    width: 192px;
+    height: 95px;
+    top: 60px;
+    right: 0px;
+    background: #4B4242;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 16px;
+    font-weight: 400;
+    display: none;
+}
+
+@media (min-width: 500px) { 
+    .acton-product::after {
+        right: -50px;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 768px) { 
+    .acton-product::after {
+        top: 80px;
+    }
+}
+
+.acton-product:hover.acton-product::after{
+    display: block;
 }
 
 @media (min-width: 768px) { 
@@ -4558,7 +4620,13 @@ border-radius: 15px;
 }
 
 .fildset-block {
-    margin-top: 24px;
+    margin-top: 35px;
+}
+
+@media (min-width: 1330px) {
+    .fildset-block {
+        margin-top: 24px;
+    }
 }
 
 fieldset {
@@ -4615,8 +4683,10 @@ fieldset {
     cursor: pointer;
 }
 
-.border-header {
-    border-bottom: 1px solid #F1F1F1;
+@media (min-width: 1330px) {
+    .border-header {
+        border-bottom: 1px solid #F1F1F1;
+    }
 }
 
 .devices-header::before {
@@ -4672,6 +4742,48 @@ fieldset {
     margin-bottom: 1px;
 }
 
+.fildset-filtr--devices {
+    position: relative;
+}
+
+.fildset-filtr--devices::before {
+    position: absolute;
+    content: '';
+    width: calc(100% + 24px);
+    height: 1px;
+    background-color: #f1f1f1;
+    bottom: -20px;
+    left: -13px;
+}
+
+.fildset-number-users {
+    position: relative;
+}
+
+.fildset-number-users::before {
+    position: absolute;
+    content: '';
+    width: calc(100% + 24px);
+    height: 1px;
+    background-color: #f1f1f1;
+    bottom: -20px;
+    left: -13px;
+}
+
+.filtr-form--fildset {
+    position: relative;
+}
+
+.filtr-form--fildset::before {
+    position: absolute;
+    content: '';
+    width: calc(100% + 24px);
+    height: 1px;
+    background-color: #f1f1f1;
+    bottom: -20px;
+    left: -13px;
+}
+
 @media (min-width: 1330px) {
     .devices-header{
         text-align: center;
@@ -4702,6 +4814,17 @@ fieldset {
         padding-top: 20px;
         padding-left: 20px;
     }
+
+    .fildset-filtr--devices::before {
+        display: none;
+    }
+
+    .fildset-number-users::before {
+        display: none;
+    }
+    .filtr-form--fildset::before {
+        display: none;
+    }
 }
 
 .devices-item:nth-child(1) {
@@ -4713,14 +4836,16 @@ fieldset {
     position: relative;
 }
 
-.devices-item::after{
-    position: absolute;
-    content: '';
-    width: 300px;
-    height: 1px;
-    background-color: #F1F1F1;
-    bottom: -12px;
-    left: -20px;
+@media (min-width: 1330px) {
+    .devices-item::after{
+        position: absolute;
+        content: '';
+        width: 300px;
+        height: 1px;
+        background-color: #F1F1F1;
+        bottom: -12px;
+        left: -20px;
+    }
 }
 
 @media (min-width: 1330px) {
@@ -4834,12 +4959,12 @@ fieldset {
     box-sizing: border-box;
     top: 0;
     left: 0;
-    background: linear-gradient(180deg, #F0F0F0 2.43%, rgba(240, 240, 240, 0) 12.85%), linear-gradient(0deg, #F0F0F0, #F0F0F0);
+    background: #fff;
     overflow: auto;
     padding-bottom: 100px;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 25px;
+    padding-left: 13px;
+    padding-right: 13px;
     z-index: 999;
     display: none;
 }
@@ -4855,7 +4980,13 @@ fieldset {
 }
 
 .filtrs-dublik {
-    background: inherit;
+    background: #ffff;
+}
+
+@media (min-width: 1330px) { 
+    .filtrs-dublik {
+        background: inherit;
+    }
 }
 
 .filtrs-activ {
@@ -4886,6 +5017,23 @@ fieldset {
     line-height: 100%;
     text-align: left;
     color: #4B4242;
+    position: relative;
+}
+
+.name-close::after {
+    position: absolute;
+    content: '';
+    width: calc(100% + 24px);
+    height: 1px;
+    background-color: #f1f1f1;
+    bottom: -20px;
+    left: -13px;
+}
+
+@media (min-width: 1330px) { 
+    .name-close::after {
+        display: none;
+    }
 }
 
 .name-close::before {
@@ -6202,6 +6350,42 @@ textarea:focus {
     border: 1px solid #AAAAAA;
     border-radius: 6px;
     color: #AAAAAA;
+    position: relative;
+    cursor: pointer;
+}
+
+.number-people::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 6px;
+    background-image: url('../image/tover-strech.png');
+    right: 14px;
+    top: 20px;
+
+}
+
+.number-people--list {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #fdfdfd;
+    top: 50px;
+    left: 0;
+    box-shadow: -1px 7px 8px 9px rgba(34, 60, 80, 0.08);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    z-index: 2;
+}
+
+.number-people--item a{
+    display: block;
+    padding: 12px 18px;
+    color: #AAA;
+}
+
+.number-people--item a:hover{
+    background-color: #F1F1F1;
 }
 
 @media (min-width: 968px) { 
@@ -6263,7 +6447,7 @@ textarea:focus {
     background-image: url('../image/successful-sending-rigth-mobile.png');
     right: 0px;
     top: -80px;
-    z-index: -1;
+    z-index: 1;
     background-repeat: no-repeat;
 }
 
@@ -6350,6 +6534,7 @@ textarea:focus {
     padding-top: 40px;
     padding-bottom: 40px;
     background-color: #FDFDFD;
+    z-index: 1;
 }
 
 @media (min-width: 968px) { 
@@ -6359,7 +6544,7 @@ textarea:focus {
         width: 315px;
         height: 140px;
         background-image: url('../image/why-we-list-befer-desctop.png');
-        z-index: -1;
+        z-index: 1;
     }
 }
 
@@ -6424,13 +6609,13 @@ textarea:focus {
     color: #4B4242;
     padding: 0;
     margin: 0; 
-    margin-top: 38px;   
+    margin-top: 0px;   
 }
 
 @media (min-width: 968px) { 
     .feters-block-text {
         text-align: left;
-        margin-top: 40px;
+        margin-top: 0px;
     }
 }
 
