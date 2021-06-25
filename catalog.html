@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style/style.css">
     <title>Каталог</title>
@@ -171,20 +172,12 @@
                         <fieldset class="filtr-form--fildset">
                             <h2 class="header-category header-close">Цена</h2>
                             <div class="range-filter category-open">
-                                <div class="range-conrols">
-                                  <div class="scale">
-                                    <div class="bar"></div>
-                                  </div>
-                                  <div class="toggle toggle-min" tabindex="0"></div>
-                                  <div class="toggle toggle-max" tabindex="0"></div>
-                                </div>
-                                <div class="price-controls">
-                                  <label class="price min-price">
-                                    <input class="min-price-input" type="number" name="min-price" value="5199">
-                                  </label>
-                                  <label class="price min-price">
-                                    <input class="max-price-input" type="number" name="max-price" value="52199">
-                                  </label>
+                                <div class="style-2 wrapper m-b-50 p-l-r">
+                                    <div class="slider-keypress m-b-20"></div>
+                                    <div class="wrap-rang--input">
+                                        <input type="text" class="input-with input-with-keypress-0">
+                                        <input type="text" class="input-with input-with-keypress-1">                                            
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>            
@@ -376,15 +369,15 @@
             </div>
             <nav class="pop-navigation">
                 <ul class="navigation-list--pop navigation-list--pop-footer">
-                    <li class="navigation-item--pop"><a href="index.html">Главная</a></li>
-                    <li class="navigation-item--pop"><a href="about.html">О компании</a></li>
-                    <li class="navigation-item--pop"><a href="answers-questions.html">Ответы на вопрос</a></li>
-                    <li class="navigation-item--pop"><a href="services.html">Услуги</a></li>
-                    <li class="navigation-item--pop"><a href="works.html">Выполненные проекты</a></li>
-                    <li class="navigation-item--pop"><a href="contact.html">Контакты</a></li>
-                    <li class="navigation-item--pop"><a href="#">Каталог</a></li>
-                    <li class="navigation-item--pop"><a href="reviews.html">Отзывы</a></li>
-                    <li class="navigation-item--pop"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="index.html">Главная</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="about.html">О компании</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="answers-questions.html">Ответы на вопрос</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="services.html">Услуги</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="works.html">Выполненные проекты</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="contact.html">Контакты</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="#">Каталог</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><a href="reviews.html">Отзывы</a></li>
+                    <li class="navigation-item--pop navigation-item--pop-footer"><button class="navigation-item--button leave-request--button" type="button">Подобрать систему</button></a></li>
                 </ul>
                 <div class="pop-connection pop-connection--footer connection">
                     <a class="connection-tel" href="tel:+7 (912) 727-07-83">+7 (912) 727-07-83</a>
@@ -486,5 +479,36 @@
     }   
     //
    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/10.1.0/nouislider.min.js"></script>
+    <script>
+        var keypressSlider = document.querySelector(".slider-keypress");
+        var input0 = document.querySelector(".input-with-keypress-0");
+        var input1 = document.querySelector(".input-with-keypress-1");
+        var inputs = [input0, input1];
+   
+        noUiSlider.create(keypressSlider, {
+        start: [1, 52199],
+        // connect: true,
+        step: 1,
+        range: {
+            min: [1],
+            max: [52199]
+        }
+        });
+   
+   
+        keypressSlider.noUiSlider.on("update", function(values, handle) {
+            inputs[handle].value = Math.ceil(values[handle]);
+        });
+        inputs.forEach(function(input, handle) {
+                input.addEventListener("change", function() {
+                    if(handle === 0) {
+                        keypressSlider.noUiSlider.set([this.value, null]);
+                    }else {
+                        keypressSlider.noUiSlider.set([null, this.value]);
+                    }
+                });
+        });
+       </script>
 </body>
 </html>
